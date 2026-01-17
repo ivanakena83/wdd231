@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="WDD 231 Course Home Page for Akena Ivan">
+  <meta name="author" content="Akena Ivan">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WDD 231 | Course Home Page</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+
+  <!-- JS -->
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
+</head>
+
+<body>
+<header>
+  <div class="header-content">
+    <img src="images/logo.svg" alt="Site Logo">
+    <span>Akena Ivan</span>
+    <button id="menu" aria-label="Toggle Navigation"></button>
+  </div>
+</header>
+
+<nav>
+  <ul class="navigation">
+    <li><a href="#" class="active">Home</a></li>
+    <li><a href="chamber/">Chamber</a></li>
+    <li><a href="final/">Final</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1>Home</h1>
+
+  <section>
+    <h2>About Me</h2>
+    <p>Hello! My name is Ivan Akena. I am studying Software Development and learning modern web technologies.</p>
+  </section>
+
+  <section>
+    <h2>Web & Computer Programming Certificate</h2>
+
+    <div class="filters">
+      <button data-filter="all">All</button>
+      <button data-filter="wdd">WDD</button>
+      <button data-filter="cse">CSE</button>
+    </div>
+
+    <ul id="course-list"></ul>
+    <p class="credits">Total Credits: <span id="credit-total">0</span></p>
+  </section>
+
+  <section>
+    <h2>Learning Goals</h2>
+    <p>Build accessible, responsive, and optimized web applications using HTML, CSS, and JavaScript.</p>
+  </section>
+</main>
+
+<footer>
+  <div class="social">
+    <a href="https://github.com/yourusername" target="_blank">GitHub</a>
+    <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+  </div>
+
+  <p>&copy; <span id="year"></span> Akena Ivan | Uganda</p>
+  <p id="lastModified"></p>
+</footer>
+</body>
+</html>
