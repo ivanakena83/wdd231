@@ -1,1 +1,21 @@
+@media (min-width: 768px) {
+
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  #menu {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    gap: 1rem;
+  }
+
+  #members.grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
 
