@@ -1,1 +1,59 @@
 
+[
+  {
+    "name": "Sunrise Bakery",
+    "address": "123 Main St, Your City",
+    "phone": "555-111-2222",
+    "website": "https://example.com",
+    "image": "bakery.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Green Valley Landscaping",
+    "address": "45 Oak Ave, Your City",
+    "phone": "555-222-3333",
+    "website": "https://example.com",
+    "image": "landscaping.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Peak Fitness Gym",
+    "address": "78 Elm St, Your City",
+    "phone": "555-333-4444",
+    "website": "https://example.com",
+    "image": "gym.jpg",
+    "membership": 1
+  },
+  {
+    "name": "Cornerstone Bookstore",
+    "address": "90 Maple Rd, Your City",
+    "phone": "555-444-5555",
+    "website": "https://example.com",
+    "image": "bookstore.jpg",
+    "membership": 2
+  },
+  {
+    "name": "Downtown Café",
+    "address": "12 Center Plaza, Your City",
+    "phone": "555-555-6666",
+    "website": "https://example.com",
+    "image": "cafe.jpg",
+    "membership": 3
+  },
+  {
+    "name": "NextGen Tech Solutions",
+    "address": "66 Innovation Way, Your City",
+    "phone": "555-666-7777",
+    "website": "https://example.com",
+    "image": "tech.jpg",
+    "membership": 3
+  },
+  {
+    "name": "Heritage Real Estate",
+    "address": "101 Market St, Your City",
+    "phone": "555-777-8888",
+    "website": "https://example.com",
+    "image": "realestate.jpg",
+    "membership": 1
+  }
+]
