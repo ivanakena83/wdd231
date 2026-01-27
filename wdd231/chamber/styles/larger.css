@@ -1,14 +1,7 @@
 @media screen and (min-width: 768px) {
-    nav ul {
-        display: flex;
-        gap: 2rem;
-    }
-
-    #hamburger {
-        display: none;
-    }
-
-    #course-cards {
+    #members-container.grid-view {
+        display: grid;
         grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
     }
 }

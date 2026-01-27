@@ -1,59 +1,66 @@
 
 [
-  {
-    "name": "Sunrise Bakery",
-    "address": "123 Main St, Your City",
-    "phone": "555-111-2222",
-    "website": "https://example.com",
-    "image": "bakery.jpg",
-    "membership": 3
-  },
-  {
-    "name": "Green Valley Landscaping",
-    "address": "45 Oak Ave, Your City",
-    "phone": "555-222-3333",
-    "website": "https://example.com",
-    "image": "landscaping.jpg",
-    "membership": 2
-  },
-  {
-    "name": "Peak Fitness Gym",
-    "address": "78 Elm St, Your City",
-    "phone": "555-333-4444",
-    "website": "https://example.com",
-    "image": "gym.jpg",
-    "membership": 1
-  },
-  {
-    "name": "Cornerstone Bookstore",
-    "address": "90 Maple Rd, Your City",
-    "phone": "555-444-5555",
-    "website": "https://example.com",
-    "image": "bookstore.jpg",
-    "membership": 2
-  },
-  {
-    "name": "Downtown Café",
-    "address": "12 Center Plaza, Your City",
-    "phone": "555-555-6666",
-    "website": "https://example.com",
-    "image": "cafe.jpg",
-    "membership": 3
-  },
-  {
-    "name": "NextGen Tech Solutions",
-    "address": "66 Innovation Way, Your City",
-    "phone": "555-666-7777",
-    "website": "https://example.com",
-    "image": "tech.jpg",
-    "membership": 3
-  },
-  {
-    "name": "Heritage Real Estate",
-    "address": "101 Market St, Your City",
-    "phone": "555-777-8888",
-    "website": "https://example.com",
-    "image": "realestate.jpg",
-    "membership": 1
-  }
+    {
+        "name": "Sunrise Tech Solutions",
+        "address": "123 Main St, Kampala, Uganda",
+        "phone": "041-1234567",
+        "website": "https://sunrisetech.com",
+        "image": "member1.jpg",
+        "membership": 3,
+        "email": "info@sunrisetech.com"
+    },
+    {
+        "name": "Green Leaf Farms",
+        "address": "45 Agriculture Rd, Entebbe, Uganda",
+        "phone": "041-2345678",
+        "website": "https://greenleaffarms.com",
+        "image": "member2.jpg",
+        "membership": 2,
+        "email": "contact@greenleaffarms.com"
+    },
+    {
+        "name": "Uganda Digital Media",
+        "address": "7 Nile Ave, Kampala, Uganda",
+        "phone": "041-3456789",
+        "website": "https://ugandadigitalmedia.com",
+        "image": "member3.jpg",
+        "membership": 1,
+        "email": "hello@udm.com"
+    },
+    {
+        "name": "Safe Transport Ltd.",
+        "address": "12 Industrial Park, Jinja, Uganda",
+        "phone": "041-4567890",
+        "website": "https://safetransport.com",
+        "image": "member4.jpg",
+        "membership": 2,
+        "email": "info@safetransport.com"
+    },
+    {
+        "name": "Bright Future Schools",
+        "address": "56 Education Rd, Kampala, Uganda",
+        "phone": "041-5678901",
+        "website": "https://brightfutureschools.com",
+        "image": "member5.jpg",
+        "membership": 3,
+        "email": "admin@brightfuture.com"
+    },
+    {
+        "name": "Eco Energy Solutions",
+        "address": "89 Renewable St, Kampala, Uganda",
+        "phone": "041-6789012",
+        "website": "https://ecoenergyug.com",
+        "image": "member6.jpg",
+        "membership": 1,
+        "email": "contact@ecoenergyug.com"
+    },
+    {
+        "name": "Global Logistics Ltd.",
+        "address": "101 Shipping Rd, Kampala, Uganda",
+        "phone": "041-7890123",
+        "website": "https://globallogistics.com",
+        "image": "member7.jpg",
+        "membership": 2,
+        "email": "info@globallogistics.com"
+    }
 ]
