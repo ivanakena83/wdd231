@@ -1,3 +1,5 @@
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent =
-  `Last Modified: ${document.lastModified}`;
+// date.js - dynamic year and last modified
+document.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    document.getElementById('lastModified').textContent = document.lastModified;
+});

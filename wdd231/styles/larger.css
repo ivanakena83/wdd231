@@ -1,20 +1,31 @@
-@media (min-width: 768px) {
-  nav .navigation {
-    display: flex;
-    justify-content: center;
-  }
+/* large.css - styles for larger screens */
+@media screen and (min-width: 768px) {
 
-  #menu {
-    display: none;
-  }
+    nav ul {
+        display: flex;
+        gap: 2rem;
+    }
 
-  main {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-  }
+    #hamburger {
+        display: none;
+    }
 
-  main h1 {
-    grid-column: 1 / -1;
-  }
+    #course-cards {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+    }
+
+    main {
+        padding: 2rem;
+    }
+
+    header img {
+        width: 70px;
+        height: 70px;
+    }
+
+    button {
+        margin-right: 0.5rem;
+    }
 }

@@ -1,7 +1,7 @@
-const menuButton = document.querySelector("#menu");
-const nav = document.querySelector(".navigation");
+// navigation.js - Hamburger toggle
+const hamburger = document.getElementById('hamburger');
+const nav = document.getElementById('mainNav');
 
-menuButton.addEventListener("click", () => {
-  nav.classList.toggle("open");
-  nav.style.display = nav.classList.contains("open") ? "block" : "none";
+hamburger.addEventListener('click', () => {
+    nav.classList.toggle('open');
 });
