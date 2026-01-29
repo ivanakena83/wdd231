@@ -1,54 +1,36 @@
-// course.js - dynamic course cards
-document.addEventListener('DOMContentLoaded', () => {
+const courses = [
+  { code: "CSE 110", name: "Programming Building Blocks", credits: 3, completed: true },
+  { code: "CSE 111", name: "Programming with Functions", credits: 3, completed: true },
+  { code: "WDD 130", name: "Web Fundamentals", credits: 3, completed: true },
+  { code: "WDD 131", name: "Dynamic Web Fundamentals", credits: 3, completed: false },
+  { code: "WDD 231", name: "Frontend Web Development I", credits: 3, completed: false }
+];
 
-    const courses = [
-        // WDD Courses
-        { name: "WDD 130 - Introduction to Web Development", credits: 3, completed: true, category: "WDD" },
-        { name: "WDD 131 - HTML & CSS", credits: 3, completed: true, category: "WDD" },
-        { name: "WDD 231 - Advanced Web Development", credits: 3, completed: false, category: "WDD" },
+const container = document.getElementById("courses");
+const creditSpan = document.getElementById("totalCredits");
+const buttons = document.querySelectorAll(".filters button");
 
-        // CSE Courses
-        { name: "CSE 110 - Introduction to Computer Science", credits: 4, completed: true, category: "CSE" },
-        { name: "CSE 210 - Data Structures & Algorithms", credits: 4, completed: false, category: "CSE" },
-        { name: "CSE 231 - Software Development Principles", credits: 3, completed: false, category: "CSE" },
-    ];
+function displayCourses(list) {
+  container.innerHTML = "";
+  let total = 0;
 
-    const courseCards = document.getElementById('course-cards');
-    const totalCredits = document.getElementById('total-credits');
+  list.forEach(course => {
+    const div = document.createElement("div");
+    div.className = "course" + (course.completed ? " completed" : "");
+    div.textContent = `${course.code} – ${course.name} (${course.credits} credits)`;
+    container.appendChild(div);
+    total += course.credits;
+  });
 
-    function displayCourses(filter = "All") {
-        courseCards.innerHTML = '';
-        let filtered = courses;
-        if (filter !== "All") {
-            filtered = courses.filter(c => c.category === filter);
-        }
+  creditSpan.textContent = total;
+}
 
-        // Calculate total credits
-        const total = filtered.reduce((sum, course) => sum + course.credits, 0);
-        totalCredits.textContent = total;
-
-        // Generate course cards
-        filtered.forEach(course => {
-            const card = document.createElement('div');
-            card.classList.add('course-card');
-            card.textContent = `${course.name} (${course.credits} credits)`;
-
-            if (course.completed) {
-                card.style.backgroundColor = "#d4edda"; // green
-                card.style.border = "1px solid #28a745";
-            } else {
-                card.style.backgroundColor = "#f8d7da"; // red
-                card.style.border = "1px solid #dc3545";
-            }
-
-            courseCards.appendChild(card);
-        });
-    }
-
-    document.getElementById('allBtn').addEventListener('click', () => displayCourses("All"));
-    document.getElementById('wddBtn').addEventListener('click', () => displayCourses("WDD"));
-    document.getElementById('cseBtn').addEventListener('click', () => displayCourses("CSE"));
-
-    // Initial load
-    displayCourses();
+buttons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const filter = btn.dataset.filter;
+    if (filter === "all") displayCourses(courses);
+    else displayCourses(courses.filter(c => c.code.startsWith(filter.toUpperCase())));
+  });
 });
+
+displayCourses(courses);

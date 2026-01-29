@@ -1,7 +1,6 @@
-// navigation.js - Hamburger toggle
-const hamburger = document.getElementById('hamburger');
-const nav = document.getElementById('mainNav');
+const menuButton = document.querySelector("#menu");
+const nav = document.querySelector(".navigation");
 
-hamburger.addEventListener('click', () => {
-    nav.classList.toggle('open');
+menuButton.addEventListener("click", () => {
+  nav.classList.toggle("open");
 });

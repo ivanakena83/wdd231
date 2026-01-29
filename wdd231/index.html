@@ -1,154 +1,89 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Course Home Page for WDD231">
-    <meta name="author" content="Ivan Akena">
-    <title>Course Home</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WDD 231 Course Home Page for PAMOJA tech.co">
+  <meta name="author" content="Ivan Akena">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/small.css">
-    <link rel="stylesheet" href="css/large.css">
+  <title>WDD 231 | Home</title>
 
-    <!-- JavaScript -->
-    <script defer>
-        // -----------------------------
-        // Navigation JS (Hamburger Menu)
-        // -----------------------------
-        document.addEventListener('DOMContentLoaded', () => {
-            const hamburger = document.getElementById('hamburger');
-            const nav = document.getElementById('mainNav');
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-            hamburger.addEventListener('click', () => {
-                nav.classList.toggle('open');
-            });
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
 
-            // -----------------------------
-            // Dynamic Date JS
-            // -----------------------------
-            document.getElementById('currentYear').textContent = new Date().getFullYear();
-            document.getElementById('lastModified').textContent = document.lastModified;
-
-            // -----------------------------
-            // Course JS
-            // -----------------------------
-            const courses = [
-                // WDD Courses
-                { name: "WDD 130 - Introduction to Web Development", credits: 3, completed: true, category: "WDD" },
-                { name: "WDD 131 - HTML & CSS", credits: 3, completed: true, category: "WDD" },
-                { name: "WDD 231 - Advanced Web Development", credits: 3, completed: false, category: "WDD" },
-
-                // CSE Courses
-                { name: "CSE 110 - Introduction to Computer Science", credits: 4, completed: true, category: "CSE" },
-                { name: "CSE 210 - Data Structures & Algorithms", credits: 4, completed: false, category: "CSE" },
-                { name: "CSE 231 - Software Development Principles", credits: 3, completed: false, category: "CSE" },
-            ];
-
-            const courseCards = document.getElementById('course-cards');
-            const totalCredits = document.getElementById('total-credits');
-
-            function displayCourses(filter = "All") {
-                courseCards.innerHTML = '';
-                let filtered = courses;
-                if (filter !== "All") {
-                    filtered = courses.filter(c => c.category === filter);
-                }
-
-                // Calculate total credits
-                const total = filtered.reduce((sum, course) => sum + course.credits, 0);
-                totalCredits.textContent = total;
-
-                // Generate course cards
-                filtered.forEach(course => {
-                    const card = document.createElement('div');
-                    card.classList.add('course-card');
-                    card.textContent = `${course.name} (${course.credits} credits)`;
-
-                    // Style completed courses differently
-                    if (course.completed) {
-                        card.style.backgroundColor = "#d4edda"; // light green
-                        card.style.border = "1px solid #28a745";
-                    } else {
-                        card.style.backgroundColor = "#f8d7da"; // light red
-                        card.style.border = "1px solid #dc3545";
-                    }
-
-                    card.style.padding = "0.5rem";
-                    card.style.marginBottom = "0.5rem";
-                    card.style.borderRadius = "5px";
-
-                    courseCards.appendChild(card);
-                });
-            }
-
-            // Event listeners for filter buttons
-            document.getElementById('allBtn').addEventListener('click', () => displayCourses("All"));
-            document.getElementById('wddBtn').addEventListener('click', () => displayCourses("WDD"));
-            document.getElementById('cseBtn').addEventListener('click', () => displayCourses("CSE"));
-
-            // Initial load
-            displayCourses();
-        });
-    </script>
+  <script src="scripts/navigation.js" defer></script>
+  <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
 </head>
+
 <body>
-    <header>
-        <img src="images/chamber.png" alt="Site Logo">
-        <span>Ivan Akena</span>
-        <button id="hamburger">&#9776;</button>
-        <nav id="mainNav">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="chamber.html">Chamber</a></li>
-                <li><a href="final.html">Final</a></li>
-            </ul>
-        </nav>
-    </header>
+<header>
+  <div class="header-content">
+    <img src="images/tech.png" alt="PAMOJA tech.co logo" class="logo">
+    <span class="name">Ivan Akena</span>
+    <button id="menu" aria-label="Toggle Menu"></button>
+  </div>
 
-    <main>
-        <h1>Home</h1>
+  <nav>
+    <ul class="navigation">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="chamber/index.html">Chamber</a></li>
+      <li><a href="final/index.html">Final</a></li>
+    </ul>
+  </nav>
+</header>
 
-        <section id="certificate">
-            <h2>Certificate Courses</h2>
-            <div id="course-cards"></div>
-            <div>Total Credits: <span id="total-credits"></span></div>
-            <div>
-                <button id="allBtn">All Courses</button>
-                <button id="wddBtn">WDD Courses</button>
-                <button id="cseBtn">CSE Courses</button>
-            </div>
-        </section>
+<main>
+  <h1>Home</h1>
 
-        <section>
-            <h2>About</h2>
-            <p>  I am Ivan Akena, a dedicated Web and Software Development student with a passion for creating responsive and accessible web applications. 
-        Through the WDD231 course, I am developing my skills in HTML, CSS, and JavaScript, applying best practices for design, user experience, 
-        and dynamic web content. My goal is to build projects that are visually appealing, functional, and optimized for all devices.</p>
-        </section>
+  <section>
+    <h2>About Me</h2>
+    <p>
+      Welcome to my WDD 231 course home page.   Hello! My name is Ivan Akena, a frontend web development student and the
+  founder of PAMOJA tech.co. I am passionate about building clean, responsive,and accessible web experiences using modern web technologies
 
-        <section>
-            <h2>Projects</h2>
-            <p>  Throughout this course, I have completed several projects that demonstrate my abilities in web development. 
-        These include building responsive course home pages, implementing dynamic content using JavaScript, 
-        and designing accessible user interfaces. Each project reflects my commitment to clean, maintainable code 
-        and a user-centered design approach. Future projects will continue to expand my skills in both front-end 
-        and full-stack development.</p>
-        </section>
-    </main>
+    </p>
+  </section>
 
-    <footer>
-        <div class="social-links">
-            <a href="https://github.com/ivanakena83" target="_blank">GitHub</a>
-            <a href="https://www.linkedin.com/in/akena-ivan83" target="_blank">LinkedIn</a>
-        </div>
-        <div>
-            &copy; <span id="currentYear"></span> Ivan Akena, Uganda
-        </div>
-        <div>
-            Last Modified: <span id="lastModified"></span>
-        </div>
-    </footer>
+  <section>
+    <h2>Certificate Courses</h2>
+
+    <div class="filters">
+      <button data-filter="all">All</button>
+      <button data-filter="wdd">WDD</button>
+      <button data-filter="cse">CSE</button>
+    </div>
+
+    <div id="courses"></div>
+    <p class="credits">Total Credits: <span id="totalCredits">0</span></p>
+  </section>
+
+  <section>
+    <h2>Learning Goals</h2>
+    <p>
+      This course strengthens my frontend development skills using semantic HTML,
+      responsive CSS, and JavaScript-driven interactivity.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <div class="social">
+    <a href="https://github.com/ivanakena83" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/akena-ivan83" target="_blank">LinkedIn</a>
+  </div>
+
+  <p>
+    © <span id="currentyear"></span> Ivan Akena | Uganda
+  </p>
+
+  <p id="lastModified"></p>
+</footer>
 </body>
 </html>

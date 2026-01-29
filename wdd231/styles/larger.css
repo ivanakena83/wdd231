@@ -1,31 +1,21 @@
-/* large.css - styles for larger screens */
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
 
-    nav ul {
-        display: flex;
-        gap: 2rem;
-    }
+  nav ul {
+    display: flex;
+    justify-content: center;
+  }
 
-    #hamburger {
-        display: none;
-    }
+  #menu {
+    display: none;
+  }
 
-    #course-cards {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1rem;
-    }
+  main {
+    max-width: 1100px;
+    margin: auto;
+  }
 
-    main {
-        padding: 2rem;
-    }
-
-    header img {
-        width: 70px;
-        height: 70px;
-    }
-
-    button {
-        margin-right: 0.5rem;
-    }
+  section {
+    display: grid;
+    gap: 1rem;
+  }
 }
