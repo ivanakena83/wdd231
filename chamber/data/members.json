@@ -1,0 +1,58 @@
+[
+  {
+    "name": "Northern Traders Ltd",
+    "address": "Plot 12 Main Street, Gulu",
+    "phone": "+256 712 345678",
+    "website": "https://northerntraders.ug",
+    "image": "biz1.webp",
+    "membership": 3
+  },
+  {
+    "name": "Acholi Fresh Foods",
+    "address": "Market Road, Gulu",
+    "phone": "+256 701 222333",
+    "website": "https://acholifresh.ug",
+    "image": "biz2.webp",
+    "membership": 2
+  },
+  {
+    "name": "Gulu Tech Hub",
+    "address": "Innovation Drive, Gulu",
+    "phone": "+256 703 888999",
+    "website": "https://gulutechhub.ug",
+    "image": "biz3.webp",
+    "membership": 3
+  },
+  {
+    "name": "Unity Hardware",
+    "address": "Industrial Area, Gulu",
+    "phone": "+256 770 111222",
+    "website": "https://unityhardware.ug",
+    "image": "biz4.webp",
+    "membership": 1
+  },
+  {
+    "name": "Pamoja Tech.Co",
+    "address": "Airport Road, Gulu",
+    "phone": "+256 789 555666",
+    "website": "https://pamojatech.co.ug",
+    "image": "biz5.webp",
+    "membership": 2
+  },
+  {
+    "name": "Hope Medical Clinic",
+    "address": "Hospital Road, Gulu",
+    "phone": "+256 752 999000",
+    "website": "https://hopemedical.ug",
+    "image": "biz6.webp",
+    "membership": 1
+  },
+  {
+    "name": "Acholi Coffee Exporters",
+    "address": "Warehouse Lane, Gulu",
+    "phone": "+256 714 444555",
+    "website": "https://acholicoffee.ug",
+    "image": "biz7.webp",
+    "membership": 3
+  }
+]

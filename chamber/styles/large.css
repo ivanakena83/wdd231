@@ -1,0 +1,21 @@
+@media (min-width: 768px) {
+
+  nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  #members.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  #members.list .member {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+  }
+
+  #members.list img {
+    display: none;
+  }
+}
