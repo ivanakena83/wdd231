@@ -3,15 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="WDD 231 course home page for Ivan Akena showcasing responsive web design and JavaScript interactivity.">
-  <meta name="author" content="Ivan Akena">
+  <meta name="description" content="Official home page of the Gulu Chamber of Commerce promoting local businesses, economic growth, and community development.">
+  <meta name="author" content="Gulu Chamber of Commerce">
 
-  <title>WDD 231 | Home</title>
+  <title>Gulu Chamber of Commerce | Home</title>
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" 
+    rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
@@ -21,77 +23,94 @@
   <!-- JS -->
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
-  <script src="scripts/courses.js" defer></script>
 </head>
 
 <body>
 <header>
   <div class="header-content">
-    <img src="images/tech.png" alt="PAMOJA tech.co logo" class="logo">
-    <span class="name">Ivan Akena</span>
+    <img src="images/chamber.jpg" alt="Gulu Chamber of Commerce logo" class="logo">
+    <span class="name">Gulu Chamber of Commerce</span>
     <button id="menu" aria-label="Toggle Menu"></button>
   </div>
 
   <nav>
     <ul class="navigation">
       <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="chamber/directory.html">Chamber</a></li>
-      <li><a href="final/index.html">Final</a></li>
+      <li><a href="discover.html">Discover</a></li>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="join.html">Join</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <h1>Home</h1>
+  <h1>Welcome to the Gulu Chamber of Commerce</h1>
 
   <section>
-    <h2>About Me</h2>
+    <div class="image-row">
+  <img src="images/city.jpg" alt="Gulu city skyline">
+  <img src="images/city2.jpg" alt="Gulu city monument">
+  <img src="images/city3.jpg" alt="Gulu clock tower">
+</div>
+
+    <h2>Our Mission</h2>
+    
     <p>
-      Hello! My name is Ivan Akena, a frontend web development student and founder of PAMOJA tech.co.
-      I focus on building clean, responsive, and accessible web experiences.
+      The Gulu Chamber of Commerce is dedicated to supporting local businesses,
+      promoting economic growth, and fostering a strong business community
+      in Gulu City and the surrounding region.
     </p>
   </section>
 
-  <section>
-    <h2>Course Projects</h2>
-    <ul>
-      <li>
-        <a href="chamber/directory.html">
-          Chamber of Commerce Project – Directory Page
-        </a>
-      </li>
-    </ul>
-  </section>
+  <section class="why-join">
+  <h2>Why Join the Chamber?</h2>
+  <p>
+    Members of the Gulu Chamber of Commerce gain access to networking opportunities,
+    business promotion, professional training, and advocacy that strengthens
+    the local economy.
+  </p>
+</section>
+
 
   <section>
-    <h2>Certificate Courses</h2>
-
-    <div class="filters">
-      <button data-filter="all">All</button>
-      <button data-filter="wdd">WDD</button>
-      <button data-filter="cse">CSE</button>
-    </div>
-
-    <div id="courses"></div>
-    <p class="credits">Total Credits: <span id="totalCredits">0</span></p>
-  </section>
-
-  <section>
-    <h2>Learning Goals</h2>
+    <h2>Explore Our Members</h2>
+    <div class="image-row">
+  <img src="images/dtb.jpg" alt="Diamond Trust Bank">
+  <img src="images/logistics.jpg" alt="Logistic Company">
+  <img src="images/olam.jpg" alt="Olam Packaging Company">
+</div>
     <p>
-      This course strengthens my frontend development skills using semantic HTML,
-      responsive CSS, and JavaScript-driven interactivity.
+      Discover businesses and organizations that are actively contributing
+      to the growth and success of Gulu City.
+    </p>
+    <a class="cta" href="directory.html">
+      View Business Directory
+    </a>
+  </section>
+
+  <section>
+    <h2>Community Impact</h2>
+    <p>
+      Through partnerships, events, and initiatives, the Gulu Chamber of Commerce
+      works closely with local leaders to create a thriving and sustainable
+      business environment.
     </p>
   </section>
 </main>
 
 <footer>
-  <div class="social">
-    <a href="https://github.com/ivanakena83" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/akena-ivan83" target="_blank">LinkedIn</a>
-  </div>
+ 
+  <div style="display:flex; justify-content:center; gap:1rem;">
+  <a href="https://facebook.com"><img src="images/facebook.png" width="32" alt="Facebook"></a>
+  <a href="https://linkedin.com"><img src="images/linkedin.png" width="32" alt="LinkedIn"></a>
+  <a href="https://github.com"><img src="images/github.png" width="32" alt="GitHub"></a>
+</div>
+<div class="contact-info">
+  <span>📍 Gulu City, Uganda | ☎ +256 744235935</span>
+  <span>✉ info@guluchamber.org</span>
+</div>
 
-  <p>© <span id="currentyear"></span> Ivan Akena | Uganda</p>
+<p>© <span id="currentyear"></span> Gulu Chamber of Commerce | Gulu City, Uganda</p>
   <p id="lastModified"></p>
 </footer>
 </body>

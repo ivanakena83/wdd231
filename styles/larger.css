@@ -19,3 +19,36 @@
     gap: 1rem;
   }
 }
+.why-join {
+  background-image: url("../images/chamber2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 3rem 1.5rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Optional overlay for readability */
+.why-join {
+  position: relative;
+}
+
+.why-join::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.why-join h2,
+.why-join p {
+  position: relative;
+  z-index: 1;
+}
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
