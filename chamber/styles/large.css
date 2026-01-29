@@ -1,8 +1,8 @@
 @media (min-width: 768px) {
 
-  nav ul {
-    display: flex;
-    gap: 1rem;
+  .site-header {
+    flex-direction: row;
+    justify-content: space-between;
   }
 
   #members.grid {
@@ -10,8 +10,7 @@
   }
 
   #members.list .member {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
+    display: flex;
     gap: 1rem;
   }
 

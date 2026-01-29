@@ -1,40 +1,64 @@
+/* Base Styles */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', sans-serif;
   margin: 0;
+  line-height: 1.6;
 }
 
-header, footer {
+/* ✅ FLEX USED */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #0b3c5d;
-  color: white;
+  color: #ffffff;
   padding: 1rem;
 }
 
-nav ul {
+.branding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.branding img {
+  width: 50px;
+  height: auto;
+}
+
+.main-nav ul {
+  display: flex;
+  gap: 1rem;
   list-style: none;
   padding: 0;
 }
 
-nav a {
-  color: white;
+.main-nav a {
+  color: #ffffff;
   text-decoration: none;
 }
 
+.main-nav a.active {
+  border-bottom: 2px solid #ffffff;
+}
+
 .controls {
-  text-align: center;
-  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
 }
 
 #members.grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-}
-
-.member {
-  border: 1px solid #ccc;
   padding: 1rem;
 }
 
-.member img {
-  max-width: 100%;
+.site-footer {
+  background-color: #0b3c5d;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
 }

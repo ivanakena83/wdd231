@@ -8,14 +8,28 @@
 
   <title>Chamber Directory | Gulu Chamber of Commerce</title>
 
+  <!-- ✅ Google Fonts API (NO @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" 
+    rel="stylesheet">
+
   <!-- Favicon -->
   <link rel="icon" href="images/chamber.png">
 
-  <!-- Facebook Meta -->
+  <!-- ✅ Open Graph / Facebook Meta -->
   <meta property="og:title" content="Gulu Chamber of Commerce Directory">
   <meta property="og:description" content="Explore businesses that are members of the Gulu Chamber of Commerce.">
-  <meta property="og:image" content="images/logo.png">
-  <meta property="og:url" content="https://example.com/chamber/directory.html">
+
+  <!-- ✅ Absolute URL + repository-hosted image -->
+  <meta 
+    property="og:image" 
+    content="https://ivanakena83.github.io/wdd231/chamber/images/chamber-og.jpg">
+
+  <meta 
+    property="og:url" 
+    content="https://ivanakena83.github.io/wdd231/chamber/directory.html">
 
   <!-- CSS -->
   <link rel="stylesheet" href="css/normalize.css">
@@ -24,13 +38,13 @@
 </head>
 
 <body>
-<header>
+<header class="site-header">
   <div class="branding">
-    <img src="images/chamber.png" alt="Chamber Logo">
+    <img src="images/chamber.png" alt="Gulu Chamber Logo">
     <h1>Gulu Chamber of Commerce</h1>
   </div>
 
-  <nav>
+  <nav class="main-nav">
     <ul>
       <li><a href="../index.html">Home</a></li>
       <li><a href="#">Discover</a></li>
@@ -49,7 +63,7 @@
   <section id="members" class="grid"></section>
 </main>
 
-<footer>
+<footer class="site-footer">
   <p>📍 Gulu City, Uganda | ☎ +256 700 000000</p>
   <p>Ivan Akena | WDD 231</p>
   <p>© <span id="year"></span> | Last Modified: <span id="modified"></span></p>
