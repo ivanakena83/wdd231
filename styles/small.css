@@ -87,3 +87,13 @@ footer {
   background: #111;
   color: white;
 }
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.social-links img {
+  width: 32px;
+  height: 32px;
+}
