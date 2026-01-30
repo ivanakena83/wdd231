@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kampala Chamber Directory</title>
+  <meta name="description" content="Directory of local businesses in Kampala.">
+  <meta name="author" content="Akena Ivan">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/small.css">
+  <link rel="stylesheet" href="css/larger.css">
+</head>
+<body>
+
+<header>
+  <h1>Kampala Chamber of Commerce</h1>
+  <nav>
+    <ul>
+      <li><a href="directory.html">Directory</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Events</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section>
+    <h2>Member Directory</h2>
+    <div class="view-toggle">
+      <button id="gridView">Grid View</button>
+      <button id="listView">List View</button>
+    </div>
+    <div id="membersContainer" class="grid"></div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="currentYear"></span> Akena Ivan | WDD 231 | Last modified: <span id="lastModified"></span></p>
+</footer>
+
+<script src="js/directory.js" defer></script>
+</body>
+</html>
