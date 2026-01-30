@@ -1,20 +1,89 @@
-@media (min-width: 768px) {
+/* ==========================
+   Larger Screens / Desktop
+========================== */
 
-  .site-header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+@media screen and (min-width: 768px) {
 
-  #members.grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  #members.list .member {
-    display: flex;
+  header .header-content {
+    justify-content: flex-start;
     gap: 1rem;
   }
 
-  #members.list img {
-    display: none;
+  header nav ul {
+    flex-direction: row;
+    gap: 2rem;
   }
+
+  main {
+    padding: 2rem 4rem;
+  }
+
+  /* Members Grid/List Layout */
+  #members.grid {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #members.grid .member-card {
+    flex: 1 1 calc(33.33% - 1rem);
+    margin: 0.5rem;
+  }
+
+  #members.list {
+    flex-direction: column;
+  }
+
+  #members.list .member-card {
+    width: 100%;
+  }
+
+  .member-card {
+    padding: 1rem;
+  }
+
+  .view-controls {
+    justify-content: flex-end;
+    margin-bottom: 2rem;
+  }
+
+  .view-controls button {
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  footer {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 4rem;
+  }
+
+  footer .social-links {
+    justify-content: flex-start;
+  }
+
+  footer .contact-info {
+    text-align: left;
+  }
+}
+.hero {
+  /* Replace 'support-bg.jpg' with the name of your image in the images folder */
+  background-image: url('../images/support.jpg'); 
+  background-size: cover;       /* Make sure the image covers the whole section */
+  background-position: center;  /* Center the image */
+  background-repeat: no-repeat;
+  height: 300px;                /* Set a visible height */
+  display: flex;                /* Center the text vertically and horizontally */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero h2 {
+  color: white;                 /* Text color */
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7); /* Makes text readable on bright images */
+  margin: 0;
 }

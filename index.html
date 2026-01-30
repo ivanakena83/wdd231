@@ -3,122 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Official home page of the Gulu Chamber of Commerce promoting local businesses, economic growth, and community development.">
-  <meta name="author" content="Gulu Chamber of Commerce">
-
-  <title>Gulu Chamber of Commerce | Home</title>
+  <meta name="description" content="WDD 231 Course Home Page for Akena Ivan showcasing coursework and projects.">
+  <meta name="author" content="Akena Ivan">
+  <title>WDD 231 | Home</title>
 
   <!-- Google Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" 
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
-  <link rel="stylesheet" href="styles/larger.css">
+  <link rel="stylesheet" href="styles/large.css">
 
-  <!-- JS -->
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
+  <script src="scripts/courses.js" defer></script>
 </head>
 
 <body>
 <header>
-  <div class="header-content">
-    <img src="images/chamber.jpg" alt="Gulu Chamber of Commerce logo" class="logo">
-    <span class="name">Gulu Chamber of Commerce</span>
-    <button id="menu" aria-label="Toggle Menu"></button>
-  </div>
-
-  <nav>
-    <ul class="navigation">
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="discover.html">Discover</a></li>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="join.html">Join</a></li>
-    </ul>
-  </nav>
+  <img src="images/chamber.jpg" alt="Site logo">
+  <span>Akena Ivan</span>
+  <button id="menu" aria-label="Menu">☰</button>
 </header>
 
+<nav id="nav">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="chamber/index.html">Chamber</a></li>
+    <li><a href="final/index.html">Final</a></li>
+  </ul>
+</nav>
+
 <main>
-  <h1>Welcome to the Gulu Chamber of Commerce</h1>
+  <h1>Home</h1>
 
   <section>
-    <div class="image-row">
-      <img src="images/city.jpg" alt="Gulu city skyline">
-      <img src="images/city2.jpg" alt="Gulu city monument">
-      <img src="images/city3.jpg" alt="Gulu clock tower">
-    </div>
-
-    <h2>Our Mission</h2>
+    <h2>About Me</h2>
     <p>
-      The Gulu Chamber of Commerce is dedicated to supporting local businesses,
-      promoting economic growth, and fostering a strong business community
-      in Gulu City and the surrounding region.
-    </p>
-  </section>
-
-  <section class="why-join">
-    <h2>Why Join the Chamber?</h2>
-    <p>
-      Members of the Gulu Chamber of Commerce gain access to networking opportunities,
-      business promotion, professional training, and advocacy that strengthens
-      the local economy.
+      My name is Akena Ivan. I am studying Software Development with a focus on
+      Web and Computer Programming. This page showcases my coursework and projects
+      for WDD 231.
     </p>
   </section>
 
   <section>
-    <h2>Explore Our Members</h2>
-    <div class="image-row">
-      <img src="images/dtb.jpg" alt="Diamond Trust Bank">
-      <img src="images/logistics.jpg" alt="Logistic Company">
-      <img src="images/olam.jpg" alt="Olam Packaging Company">
+    <h2>Certificate Courses</h2>
+
+    <div class="filters">
+      <button data-filter="all">All Courses</button>
+      <button data-filter="wdd">WDD Courses</button>
+      <button data-filter="cse">CSE Courses</button>
     </div>
-    <p>
-      Discover businesses and organizations that are actively contributing
-      to the growth and success of Gulu City.
-    </p>
-    <a class="cta" href="directory.html">View Business Directory</a>
+
+    <p id="credits"></p>
+    <div id="courses"></div>
   </section>
 
   <section>
-    <h2>Community Impact</h2>
-    <div class="image-row">
-      <img src="images/community.jpg" alt="impact">
-      <img src="images/community2.jpg" alt="impact">
-      <img src="images/community3.jpg" alt="impact">
-    </div>
+    <h2>Projects</h2>
     <p>
-      Through partnerships, events, and initiatives, the Gulu Chamber of Commerce
-      works closely with local leaders to create a thriving and sustainable
-      business environment.
+      Throughout this course, I will develop responsive websites and dynamic
+      applications using HTML, CSS, and JavaScript.
     </p>
   </section>
 </main>
 
 <footer>
-  <div class="social-links">
-    <a href="https://www.facebook.com/ivan.akena" target="_blank" rel="noopener">
-      <img src="images/facebook.png" alt="Facebook">
-    </a>
-    <a href="https://www.linkedin.com/in/akena-ivan83" target="_blank" rel="noopener">
-      <img src="images/linkedin.png" alt="LinkedIn">
-    </a>
-    <a href="https://github.com/ivanakena83" target="_blank" rel="noopener">
-      <img src="images/github.png" alt="GitHub">
-    </a>
-  </div>
+<div class="social-links">
+  <a href="https://www.facebook.com/ivan.akena" target="_blank" rel="noopener">
+    <img src="../images/facebook.png" alt="Facebook">
+  </a>
+  <a href="https://www.linkedin.com/in/akena-ivan83" target="_blank" rel="noopener">
+    <img src="../images/linkedin.png" alt="LinkedIn">
+  </a>
+  <a href="https://github.com/ivanakena83" target="_blank" rel="noopener">
+    <img src="../images/github.png" alt="GitHub">
+  </a>
+</div>
 
-  <div class="contact-info">
-    <p>📍 Gulu City, Uganda | ☎ +256 744235935</p>
-    <p>✉ <a href="mailto:info@guluchamber.org">info@guluchamber.org</a></p>
-  </div>
-
-  <p>© <span id="currentyear"></span> Gulu Chamber of Commerce | Gulu City, Uganda</p>
-  <p id="lastModified">Last updated: <span></span></p>
+<p>© <span id="year"></span> Akena Ivan | Uganda</p>
+  <p id="lastModified"></p>
 </footer>
 </body>
 </html>

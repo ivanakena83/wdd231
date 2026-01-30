@@ -1,54 +1,26 @@
 @media (min-width: 768px) {
 
-  nav ul {
-    display: flex;
-    justify-content: center;
-  }
-
   #menu {
     display: none;
   }
 
+  nav {
+    display: block;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
   main {
-    max-width: 1100px;
-    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    gap: 1rem;
   }
 
   section {
-    display: grid;
-    gap: 1rem;
+    margin: 0;
   }
-}
-.why-join {
-  background-image: url("../images/chamber2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-  padding: 3rem 1.5rem;
-  color: #ffffff;
-  text-align: center;
-}
-
-/* Optional overlay for readability */
-.why-join {
-  position: relative;
-}
-
-.why-join::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-}
-
-.why-join h2,
-.why-join p {
-  position: relative;
-  z-index: 1;
-}
-.contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
 }

@@ -1,58 +1,58 @@
 [
   {
-    "name": "Northern Traders Ltd",
-    "address": "Plot 12 Main Street, Gulu",
-    "phone": "+256 712 345678",
-    "website": "https://northerntraders.ug",
-    "image": "biz1.webp",
+    "name": "Diamond Trust Bank",
+    "address": "Plot 12, Gulu City",
+    "phone": "+256 700 000001",
+    "website": "https://dtb.co.ug",
+    "image": "dtb.jpg",
     "membership": 3
   },
   {
-    "name": "Acholi Fresh Foods",
-    "address": "Market Road, Gulu",
-    "phone": "+256 701 222333",
-    "website": "https://acholifresh.ug",
-    "image": "biz2.webp",
+    "name": "Olam Packaging Company",
+    "address": "Plot 25, Gulu Industrial Area",
+    "phone": "+256 700 000002",
+    "website": "https://olamgroup.com",
+    "image": "olam.jpg",
     "membership": 2
   },
   {
-    "name": "Gulu Tech Hub",
-    "address": "Innovation Drive, Gulu",
-    "phone": "+256 703 888999",
-    "website": "https://gulutechhub.ug",
-    "image": "biz3.webp",
-    "membership": 3
-  },
-  {
-    "name": "Unity Hardware",
-    "address": "Industrial Area, Gulu",
-    "phone": "+256 770 111222",
-    "website": "https://unityhardware.ug",
-    "image": "biz4.webp",
+    "name": "Logistics Ltd",
+    "address": "Plot 8, Gulu Transport Hub",
+    "phone": "+256 700 000003",
+    "website": "https://logistics.com",
+    "image": "logistics.jpg",
     "membership": 1
   },
   {
-    "name": "Pamoja Tech.Co",
-    "address": "Airport Road, Gulu",
-    "phone": "+256 789 555666",
-    "website": "https://pamojatech.co.ug",
-    "image": "biz5.webp",
+    "name": "Cafe Gulu",
+    "address": "Main Street, Gulu",
+    "phone": "+256 700 000004",
+    "website": "https://cafegulu.com",
+    "image": "cafe.jpg",
     "membership": 2
   },
   {
-    "name": "Hope Medical Clinic",
-    "address": "Hospital Road, Gulu",
-    "phone": "+256 752 999000",
-    "website": "https://hopemedical.ug",
-    "image": "biz6.webp",
+    "name": "Gulu Electronics",
+    "address": "Plot 5, Gulu Market",
+    "phone": "+256 700 000005",
+    "website": "https://guluelectronics.com",
+    "image": "electronics.jpg",
     "membership": 1
   },
   {
-    "name": "Acholi Coffee Exporters",
-    "address": "Warehouse Lane, Gulu",
-    "phone": "+256 714 444555",
-    "website": "https://acholicoffee.ug",
-    "image": "biz7.webp",
+    "name": "Green Grocers",
+    "address": "Plot 10, Gulu City",
+    "phone": "+256 700 000006",
+    "website": "https://greengrocers.com",
+    "image": "grocers.jpg",
     "membership": 3
+  },
+  {
+    "name": "Tech Hub Gulu",
+    "address": "Tech Park, Gulu",
+    "phone": "+256 700 000007",
+    "website": "https://techhubgulu.com",
+    "image": "techhub.jpg",
+    "membership": 2
   }
 ]

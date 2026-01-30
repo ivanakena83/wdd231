@@ -1,74 +1,97 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Business directory for the Gulu Chamber of Commerce">
-  <meta name="author" content="Ivan Akena">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Gulu Chamber of Commerce">
 
-  <title>Chamber Directory | Gulu Chamber of Commerce</title>
-
-  <!-- ✅ Google Fonts API (NO @import) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" 
-    rel="stylesheet">
+  <title>Gulu Chamber of Commerce | Directory</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="images/chamber.png">
+  <link rel="icon" href="../images/chamber.png">
 
-  <!-- ✅ Open Graph / Facebook Meta -->
+  <!-- Facebook Open Graph Meta -->
   <meta property="og:title" content="Gulu Chamber of Commerce Directory">
-  <meta property="og:description" content="Explore businesses that are members of the Gulu Chamber of Commerce.">
+  <meta property="og:description" content="Explore local businesses that are members of the Gulu Chamber of Commerce.">
+  <meta property="og:image" content="../images/chamber.png">
+  <meta property="og:url" content="https://example.com/chamber/directory.html">
 
-  <!-- ✅ Absolute URL + repository-hosted image -->
-  <meta 
-    property="og:image" 
-    content="https://ivanakena83.github.io/wdd231/chamber/images/chamber-og.jpg">
-
-  <meta 
-    property="og:url" 
-    content="https://ivanakena83.github.io/wdd231/chamber/directory.html">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/small.css">
-  <link rel="stylesheet" href="css/larger.css">
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="stylesheet" href="../styles/small.css">
+  <link rel="stylesheet" href="../styles/larger.css">
+
+  <!-- JS -->
+  <script src="../scripts/directory.js" defer></script>
+  <script src="../scripts/date.js" defer></script>
 </head>
 
 <body>
-<header class="site-header">
-  <div class="branding">
-    <img src="images/chamber.png" alt="Gulu Chamber Logo">
-    <h1>Gulu Chamber of Commerce</h1>
+<header>
+  <div class="header-content">
+    <img src="../images/chamber.jpg" alt="Gulu Chamber of Commerce logo" class="logo">
+    <span class="name">Gulu Chamber of Commerce</span>
+    <button id="menu" aria-label="Toggle Menu"></button>
   </div>
 
-  <nav class="main-nav">
-    <ul>
+  <nav>
+    <ul class="navigation">
       <li><a href="../index.html">Home</a></li>
-      <li><a href="#">Discover</a></li>
+      <li><a href="discover.html">Discover</a></li>
       <li><a href="directory.html" class="active">Directory</a></li>
-      <li><a href="#">Join</a></li>
+      <li><a href="join.html">Join</a></li>
     </ul>
   </nav>
 </header>
 
+  <section class="hero">
+  <h2>SUPPORTING SMALL BUSINESSES</h2>
+
 <main>
-  <section class="controls">
+  <h1>Member Directory</h1>
+
+</section>
+<!-- Members Container -->
+<section id="members" class="grid">
+  <!-- Members will be dynamically loaded here -->
+</section>
+
+
+  <!-- Toggle Buttons -->
+  <section class="view-controls">
     <button id="grid">Grid View</button>
     <button id="list">List View</button>
   </section>
 
-  <section id="members" class="grid"></section>
+  </section>
 </main>
 
-<footer class="site-footer">
-  <p>📍 Gulu City, Uganda | ☎ +256 700 000000</p>
-  <p>Ivan Akena | WDD 231</p>
-  <p>© <span id="year"></span> | Last Modified: <span id="modified"></span></p>
-</footer>
+<footer>
+  <div class="social-links">
+    <a href="https://www.facebook.com/ivan.akena" target="_blank" rel="noopener">
+      <img src="../images/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.linkedin.com/in/akena-ivan83" target="_blank" rel="noopener">
+      <img src="../images/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/ivanakena83" target="_blank" rel="noopener">
+      <img src="../images/github.png" alt="GitHub">
+    </a>
+  </div>
 
-<script src="js/directory.js"></script>
+  <div class="contact-info">
+    <p>📍 Gulu City, Uganda | ☎ +256 744235935</p>
+    <p>✉ <a href="mailto:info@guluchamber.org">info@guluchamber.org</a></p>
+  </div>
+
+  <p>© <span id="currentyear"></span> Gulu Chamber of Commerce | Gulu City, Uganda</p>
+  <p id="lastModified">Last updated: <span></span></p>
+</footer>
 </body>
 </html>
