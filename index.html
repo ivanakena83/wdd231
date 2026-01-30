@@ -7,28 +7,30 @@
   <meta name="author" content="Akena Ivan">
   <title>WDD 231 | Home</title>
 
-  <!-- Google Font -->
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
 
+  <!-- JavaScript -->
   <script src="scripts/navigation.js" defer></script>
   <script src="scripts/date.js" defer></script>
   <script src="scripts/courses.js" defer></script>
 </head>
-
 <body>
-<header>
+
+<header class="container">
   <img src="images/chamber.jpg" alt="Site logo">
   <span>Akena Ivan</span>
   <button id="menu" aria-label="Menu">☰</button>
 </header>
 
-<nav id="nav">
+<nav class="container" id="nav">
   <ul>
     <li><a href="index.html" class="active">Home</a></li>
     <li><a href="chamber/index.html">Chamber</a></li>
@@ -36,31 +38,37 @@
   </ul>
 </nav>
 
-<main>
+<main class="container">
   <h1>Home</h1>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      My name is Akena Ivan. I am studying Software Development with a focus on
-      Web and Computer Programming. This page showcases my coursework and projects
-      for WDD 231.
-    </p>
+  <!-- About Me Section -->
+  <section class="about-me">
+    <div class="about-text">
+      <h2>About Me</h2>
+      <p>
+        My name is Akena Ivan. I am studying Software Development with a focus on
+        Web and Computer Programming. This page showcases my coursework and projects
+        for WDD 231.
+      </p>
+    </div>
+    <div class="about-image">
+      <img src="images/profile.jpg" alt="Akena Ivan">
+    </div>
   </section>
 
+  <!-- Certificate Courses Section -->
   <section>
     <h2>Certificate Courses</h2>
-
     <div class="filters">
       <button data-filter="all">All Courses</button>
       <button data-filter="wdd">WDD Courses</button>
       <button data-filter="cse">CSE Courses</button>
     </div>
-
     <p id="credits"></p>
-    <div id="courses"></div>
+    <div id="courses" class="course-container"></div>
   </section>
 
+  <!-- Projects Section -->
   <section>
     <h2>Projects</h2>
     <p>
@@ -70,21 +78,21 @@
   </section>
 </main>
 
-<footer>
-<div class="social-links">
-  <a href="https://www.facebook.com/ivan.akena" target="_blank" rel="noopener">
-    <img src="../images/facebook.png" alt="Facebook">
-  </a>
-  <a href="https://www.linkedin.com/in/akena-ivan83" target="_blank" rel="noopener">
-    <img src="../images/linkedin.png" alt="LinkedIn">
-  </a>
-  <a href="https://github.com/ivanakena83" target="_blank" rel="noopener">
-    <img src="../images/github.png" alt="GitHub">
-  </a>
-</div>
-
-<p>© <span id="year"></span> Akena Ivan | Uganda</p>
+<footer class="container">
+  <div class="social-links">
+    <a href="https://www.facebook.com/ivan.akena" target="_blank" rel="noopener">
+      <img src="images/facebook.png" alt="Facebook">
+    </a>
+    <a href="https://www.linkedin.com/in/akena-ivan83" target="_blank" rel="noopener">
+      <img src="images/linkedin.png" alt="LinkedIn">
+    </a>
+    <a href="https://github.com/ivanakena83" target="_blank" rel="noopener">
+      <img src="images/github.png" alt="GitHub">
+    </a>
+  </div>
+  <p>© <span id="year"></span> Akena Ivan | Uganda</p>
   <p id="lastModified"></p>
 </footer>
+
 </body>
 </html>

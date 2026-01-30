@@ -1,0 +1,29 @@
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .about-me {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .about-text, .about-image {
+    flex: 1;
+  }
+
+  .about-image img {
+    max-width: 180px; /* smaller image to fit on one page */
+  }
+
+  .course-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .course-card {
+    width: calc(33% - 0.5rem); /* 3 in a row, smaller cards */
+  }
+}

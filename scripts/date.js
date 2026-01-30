@@ -1,5 +1,5 @@
-document.getElementById("currentyear").textContent =
-  new Date().getFullYear();
+// Dynamic copyright year
+document.getElementById('year').textContent = new Date().getFullYear();
 
-document.getElementById("lastModified").textContent =
-  `Last Modified: ${document.lastModified}`;
+// Last modified date
+document.getElementById('lastModified').textContent = `Last Modified: ${document.lastModified}`;
