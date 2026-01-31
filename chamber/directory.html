@@ -2,65 +2,82 @@
 <html lang="en-US">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Directory page for the Chamber of Commerce showcasing local businesses and members.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Directory of members for the Kampala Chamber of Commerce. Connect with local businesses and services.">
   <meta name="author" content="Akena Ivan">
-  <title>Chamber Directory | WDD 231</title>
+  <title>Kampala Chamber of Commerce | Directory</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="images/chamber.jpg">
+  <link rel="icon" href="images/hero.jpg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="../styles/normalize.css">
-  <link rel="stylesheet" href="../styles/small.css">
-  <link rel="stylesheet" href="../styles/large.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
 
   <!-- JS -->
-  <script src="directory.js" defer></script>
-  <script src="../scripts/date.js" defer></script>
-  <script src="../scripts/navigation.js" defer></script>
+  <script src="scripts/directory.js" defer></script>
 </head>
+
 <body>
+  <!-- HEADER -->
+  <header class="container header">
+    <div class="header-content">
+      <img src="images/chamber.jpg" alt="Kampala Chamber of Commerce Logo" class="logo">
+      <h1>Kampala Chamber of Commerce</h1>
+    </div>
+  </header>
 
-<header class="container">
-  <img src="images/chamber.jpg" alt="Chamber logo">
-  <span>Kampala Chamber of Commerce</span>
-  <button id="menu" aria-label="Menu">☰</button>
-</header>
+  <!-- NAVIGATION -->
+  <nav class="container">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="directory.html" class="active">Directory</a></li>
+      <li><a href="#">Join</a></li>
+    </ul>
+  </nav>
 
-<nav class="container" id="nav">
-  <ul>
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="directory.html" class="active">Directory</a></li>
-    <li><a href="../final/index.html">Final</a></li>
-  </ul>
-</nav>
+  <!-- MAIN -->
+  <main class="container">
+    <section class="community">
+      <h2>Member Directory</h2>
+      
+      <div class="view-toggle">
+        <button id="grid-view">Grid View</button>
+        <button id="list-view">List View</button>
+      </div>
 
-<main class="container">
-  <h1>Member Directory</h1>
+      <div id="member-directory" class="community-grid"></div>
+    </section>
+  </main>
 
-  <div class="view-controls">
-    <button id="gridView">Grid View</button>
-    <button id="listView">List View</button>
-  </div>
+  <!-- FOOTER -->
+  <footer class="container footer">
+    <div class="footer-info">
+      <p><strong>Kampala Chamber of Commerce</strong></p>
+      <p>📍 Plot 12, Kampala Road, Kampala, Uganda</p>
+      <p>📧 info@kampalachamber.org</p>
+      <p>📞 +256 700 123 456</p>
+    </div>
 
-  <div id="members" class="member-container">
-    <!-- Members dynamically loaded here -->
-  </div>
-</main>
+    <div class="footer-bottom">
+      <div class="socials">
+        <a href="https://facebook.com/ivanakena" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+        <a href="https://linkedin.com/in/akena-ivan83" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+        <a href="https://github.com/akenaivan83" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+      </div>
+      <p>© <span id="year"></span> Akena Ivan | WDD 231 | Last Modified: <span id="last-modified"></span></p>
+    </div>
+  </footer>
 
-<footer class="container">
-  <div class="social-links">
-    <a href="https://github.com/ivanakena83" target="_blank" rel="noopener">
-      <img src="images/github.png" alt="GitHub">
-    </a>
-    <a href="https://www.linkedin.com/in/akena-ivan83" target="_blank" rel="noopener">
-      <img src="images/linkedin.png" alt="LinkedIn">
-    </a>
-  </div>
-  <p>© <span id="year"></span> Akena Ivan | WDD 231</p>
-  <p id="lastModified"></p>
-</footer>
-
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("last-modified").textContent = document.lastModified;
+  </script>
 </body>
 </html>

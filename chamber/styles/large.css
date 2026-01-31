@@ -18,9 +18,10 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
+  /* Member container grid smaller */
   .member-container {
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
   }
 
   .hero {
@@ -35,5 +36,10 @@
 
   .socials {
     justify-content: center;
+  }
+
+  /* DIRECTORY */
+  .member-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

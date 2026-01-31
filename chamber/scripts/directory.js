@@ -1,41 +1,53 @@
-alert("directory.js is running");
+const memberDirectory = document.getElementById('member-directory');
+const gridBtn = document.getElementById('grid-view');
+const listBtn = document.getElementById('list-view');
 
-document.addEventListener("DOMContentLoaded", async () => {
-  const container = document.getElementById("members");
-  const gridBtn = document.getElementById("gridView");
-  const listBtn = document.getElementById("listView");
-
+async function fetchMembers() {
   try {
-    const response = await fetch("data/members.json");
-    if (!response.ok) throw new Error("Fetch failed");
-
+    const response = await fetch('data/members.json');
     const members = await response.json();
-
-    members.forEach(member => {
-      const card = document.createElement("section");
-      card.className = "member-card";
-
-      card.innerHTML = `
-        <img src="images/${member.image}" alt="${member.name}">
-        <h3>${member.name}</h3>
-        <p>${member.address}</p>
-        <p>${member.phone}</p>
-        <a href="${member.website}" target="_blank">Website</a>
-      `;
-
-      container.appendChild(card);
-    });
-
-    gridBtn.onclick = () => {
-      container.className = "member-container grid";
-    };
-
-    listBtn.onclick = () => {
-      container.className = "member-container list";
-    };
-
+    displayMembers(members);
   } catch (error) {
+    memberDirectory.innerHTML = '<p>Failed to load members. Please try again later.</p>';
     console.error(error);
-    container.innerHTML = "<p style='color:red'>Members failed to load.</p>";
   }
+}
+
+function displayMembers(members) {
+  memberDirectory.innerHTML = '';
+  members.forEach(member => {
+    const card = document.createElement('div');
+    card.classList.add('community-box', 'member-card');
+
+    let levelText = '';
+    switch(member.level) {
+      case 1: levelText = 'Member'; break;
+      case 2: levelText = 'Silver'; break;
+      case 3: levelText = 'Gold'; break;
+    }
+
+    card.innerHTML = `
+      <img src="images/${member.image}" alt="${member.name}">
+      <h3>${member.name}</h3>
+      <p><strong>Address:</strong> ${member.address}</p>
+      <p><strong>Phone:</strong> ${member.phone}</p>
+      <p><strong>Website:</strong> <a href="${member.website}" target="_blank">${member.website}</a></p>
+      <p><strong>Membership:</strong> ${levelText}</p>
+    `;
+    memberDirectory.appendChild(card);
+  });
+}
+
+// Toggle Grid/List view
+gridBtn.addEventListener('click', () => {
+  memberDirectory.classList.remove('list-view');
+  memberDirectory.classList.add('community-grid');
 });
+
+listBtn.addEventListener('click', () => {
+  memberDirectory.classList.remove('community-grid');
+  memberDirectory.classList.add('list-view');
+});
+
+// Initialize
+fetchMembers();
