@@ -43,3 +43,7 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/* Hide member images when in list view */
+#member-directory.list-view .member-card img {
+    display: none;
+}

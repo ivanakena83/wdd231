@@ -192,3 +192,7 @@ nav ul li a:hover {
 .socials img:hover {
   transform: scale(1.15);
 }
+/* Hide member images when in list view */
+#member-directory.list-view .member-card img {
+    display: none;
+}
