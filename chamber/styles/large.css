@@ -1,28 +1,11 @@
 @media (min-width: 768px) {
 
-  /* HEADER */
-  .header-content {
-    justify-content: center; /* title centered, logo still on left */
-  }
-
-  /* NAV */
-  nav ul {
-    display: flex;
-    justify-content: center;
-  }
-
-  nav ul li {
-    flex: 1;
-  }
-
-  /* INTRO BOX */
   .intro-box {
-    flex-direction: row; /* image and text side by side */
+    flex-direction: row;
     gap: 1.5rem;
   }
 
-  .intro-image,
-  .intro-text {
+  .intro-image, .intro-text {
     flex: 1;
   }
 
@@ -31,25 +14,19 @@
     object-fit: cover;
   }
 
-  /* COMMUNITY */
   .community-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* SPOTLIGHTS */
   .member-container {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
-    width: 100%;
   }
 
-  /* HERO */
   .hero {
     height: 400px;
   }
 
-  /* FOOTER */
   .footer-bottom {
     display: grid;
     grid-template-columns: auto 1fr;
