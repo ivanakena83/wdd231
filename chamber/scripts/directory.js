@@ -1,54 +1,41 @@
-const membersContainer = document.getElementById('members');
-const gridBtn = document.getElementById('gridView');
-const listBtn = document.getElementById('listView');
+alert("directory.js is running");
 
-async function loadMembers() {
+document.addEventListener("DOMContentLoaded", async () => {
+  const container = document.getElementById("members");
+  const gridBtn = document.getElementById("gridView");
+  const listBtn = document.getElementById("listView");
+
   try {
-    // Fetch members.json from data folder
-    const response = await fetch('data/members.json');
-    if (!response.ok) throw new Error('Failed to fetch members.json');
+    const response = await fetch("data/members.json");
+    if (!response.ok) throw new Error("Fetch failed");
 
     const members = await response.json();
 
-    displayMembers(members, 'grid');
+    members.forEach(member => {
+      const card = document.createElement("section");
+      card.className = "member-card";
 
-    // Toggle grid/list
-    gridBtn.addEventListener('click', () => displayMembers(members, 'grid'));
-    listBtn.addEventListener('click', () => displayMembers(members, 'list'));
-  } catch (error) {
-    console.error(error);
-    membersContainer.innerHTML = `<p style="color:red">Failed to load members.</p>`;
-  }
-}
-
-function displayMembers(members, viewType) {
-  membersContainer.innerHTML = '';
-  membersContainer.className = `member-container ${viewType}`;
-
-  members.forEach(member => {
-    const card = document.createElement('div');
-    card.className = 'member-card';
-
-    // Badge color
-    let badgeClass = '';
-    let badgeText = '';
-    if (member.level === 3) { badgeClass='gold'; badgeText='Gold'; }
-    else if (member.level === 2) { badgeClass='silver'; badgeText='Silver'; }
-    else { badgeClass='member'; badgeText='Member'; }
-
-    card.innerHTML = `
-      <div class="badge ${badgeClass}">${badgeText}</div>
-      <img src="images/${member.image}" alt="${member.name}">
-      <div class="member-info">
+      card.innerHTML = `
+        <img src="images/${member.image}" alt="${member.name}">
         <h3>${member.name}</h3>
         <p>${member.address}</p>
         <p>${member.phone}</p>
-        <p><a href="${member.website}" target="_blank">${member.website}</a></p>
-      </div>
-    `;
-    membersContainer.appendChild(card);
-  });
-}
+        <a href="${member.website}" target="_blank">Website</a>
+      `;
 
-// Load on page load
-loadMembers();
+      container.appendChild(card);
+    });
+
+    gridBtn.onclick = () => {
+      container.className = "member-container grid";
+    };
+
+    listBtn.onclick = () => {
+      container.className = "member-container list";
+    };
+
+  } catch (error) {
+    console.error(error);
+    container.innerHTML = "<p style='color:red'>Members failed to load.</p>";
+  }
+});

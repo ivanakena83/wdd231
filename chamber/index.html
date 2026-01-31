@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Official home page of the Kampala Chamber of Commerce supporting local businesses.">
+  <meta name="author" content="Akena Ivan">
+  <title>Kampala Chamber of Commerce | Home</title>
+
+  <link rel="icon" href="images/hero.jpg">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/large.css">
+
+  <script src="scripts/weather.js" defer></script>
+  <script src="scripts/spotlight.js" defer></script>
+</head>
+
+<body>
+
+<header class="container header">
+  <div class="header-content">
+    <img src="images/chamber.jpg" alt="Kampala Chamber of Commerce Logo" class="logo">
+    <h1>Kampala Chamber of Commerce</h1>
+  </div>
+</header>
+
+<nav class="container">
+  <ul>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="directory.html">Directory</a></li>
+    <li><a href="#">Join</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+
+  <!-- HERO -->
+  <section class="hero">
+    <img src="images/kampala.jpg" alt="Kampala city">
+    <div class="hero-text">
+      <h2>WELCOME TO KAMPALA<br>CHAMBER OF COMMERCE</h2>
+    </div>
+  </section>
+
+  <!-- INTRO BOX -->
+  
+<!-- INTRO BOX -->
+<section class="intro-box">
+  <div class="intro-image">
+    <img src="images/business.jpg" alt="Local business owners">
+  </div>
+  <div class="intro-text">
+    <h2>Grow With Us</h2>
+    <p>
+      We connect businesses, promote investment opportunities,
+      and support entrepreneurship throughout Kampala.
+    </p>
+    <a href="#" class="cta">Join the Chamber</a>
+  </div>
+</section>
+
+  <!-- COMMUNITY -->
+  <section class="community">
+    <h2>COMMUNITY</h2>
+
+    <div class="community-grid">
+      <!-- EVENTS -->
+      <div class="community-box">
+        <h3>Events</h3>
+        <p>📅 Business Networking Night – March 15</p>
+        <p>📅 Entrepreneurship Workshop – March 22</p>
+      </div>
+
+      <!-- CURRENT WEATHER -->
+      <div class="community-box">
+        <h3>Current Weather</h3>
+        <p id="current-temp">🌡️ 27°C</p>
+        <p id="weather-desc">☀️ Partly Cloudy</p>
+      </div>
+
+      <!-- FORECAST -->
+      <div class="community-box">
+        <h3>Weather Forecast</h3>
+        <p><span id="day1">Mon</span> – <span id="temp1">28°C</span></p>
+        <p><span id="day2">Tue</span> – <span id="temp2">26°C</span></p>
+        <p><span id="day3">Wed</span> – <span id="temp3">27°C</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPOTLIGHTS -->
+  <section>
+    <h2>Member Spotlights</h2>
+    <div id="spotlights" class="member-container"></div>
+  </section>
+
+</main>
+
+<footer class="container footer">
+  <div class="footer-info">
+    <p><strong>Kampala Chamber of Commerce</strong></p>
+    <p>📍 Plot 12, Kampala Road, Kampala, Uganda</p>
+    <p>📧 info@kampalachamber.org</p>
+    <p>📞 +256 700 123 456</p>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="socials">
+      <a href="https://facebook.com/ivan akena" target="_blank">
+        <img src="images/facebook.png" alt="Facebook">
+      </a>
+      <a href="https://linkedin.com/in/akena-ivan83" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn">
+      </a>
+      <a href="https://github.com/akenaivan83" target="_blank">
+        <img src="images/github.png" alt="GitHub">
+      </a>
+    </div>
+    <p>© <span id="year"></span> Akena Ivan | WDD 231</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

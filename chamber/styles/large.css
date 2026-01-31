@@ -1,37 +1,108 @@
 @media (min-width: 768px) {
+
+  /* NAV */
   nav ul {
     display: flex;
-    gap: 2rem;
+    justify-content: center;
   }
 
-  .member-container.grid {
+  nav ul li {
+    flex: 1;
+  }
+
+  /* INTRO BOX */
+  .intro-box {
     display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
-  .member-card {
-    flex: 1 1 calc(33% - 1rem);
-    text-align: center;
+  .intro-image,
+  .intro-text {
+    flex: 1;
   }
 
-  .member-card img {
-    max-width: 120px;
+  .intro-image img {
+    height: 100%;
+    object-fit: cover;
   }
 
-  .member-container.list .member-card {
-    flex-direction: row;
-    align-items: center;
-    text-align: left;
-    padding: 1rem;
+  /* COMMUNITY */
+  .community-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  .member-container.list .member-card img {
-    margin-right: 1rem;
-    margin-bottom: 0;
-  }
-
-  footer .social-links {
+  /* SPOTLIGHTS */
+  .member-container {
+    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+  }
+
+  /* HERO */
+  .hero {
+    height: 400px;
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
+
+  .footer-info {
+    text-align: left;
+  }
+
+  .footer-bottom {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  #spotlights {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+  }
+
+  /* HEADER */
+  .header-content {
+    justify-content: center; /* centers title */
+    position: relative;
+  }
+
+  .logo {
+    position: absolute;
+    left: 2rem; /* extreme left */
+  }
+}
+@media (min-width: 768px) {
+  .intro-box {
+    display: flex;
+    flex-direction: row; /* side by side */
+    gap: 1.5rem;
+    height: 300px; /* optional: adjust height */
+  }
+
+  .intro-image, .intro-text {
+    flex: 1; /* equal width 50/50 */
+  }
+
+  .intro-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .intro-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* vertical center of text */
+    padding: 1.5rem;
   }
 }

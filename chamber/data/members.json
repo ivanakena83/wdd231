@@ -1,5 +1,5 @@
 [
-  {"name":"Sunny Cafe","address":"123 Main Street","phone":"(555) 123-4567","website":"https://sunnycafe.example.com","image":"sunnycafe.jpg","level":3},
+  {"name":"Sunny Cafe","address":"123 Main Street","phone":"(555) 123-4567","website":"https://sunnycafe.example.com","image":"cafe.jpg","level":3},
   {"name":"Tech Solutions Ltd","address":"456 Industrial Road","phone":"(555) 234-5678","website":"https://techsolutions.example.com","image":"techsolutions.jpg","level":2},
   {"name":"Green Grocery","address":"789 Market Avenue","phone":"(555) 345-6789","website":"https://greengrocery.example.com","image":"greengrocery.jpg","level":1},
   {"name":"Book Haven","address":"101 Library Lane","phone":"(555) 456-7890","website":"https://bookhaven.example.com","image":"bookhaven.jpg","level":3},
