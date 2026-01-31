@@ -3,47 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kampala Chamber Directory</title>
-  <meta name="description" content="Directory of local businesses in Kampala.">
+  <meta name="description" content="Directory page for the Chamber of Commerce showcasing local businesses and members.">
   <meta name="author" content="Akena Ivan">
+  <title>Chamber Directory | WDD 231</title>
 
   <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="images/chamber.jpg">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/small.css">
-  <link rel="stylesheet" href="css/larger.css">
+  <link rel="stylesheet" href="../styles/normalize.css">
+  <link rel="stylesheet" href="../styles/small.css">
+  <link rel="stylesheet" href="../styles/large.css">
+
+  <!-- JS -->
+  <script src="directory.js" defer></script>
+  <script src="../scripts/date.js" defer></script>
+  <script src="../scripts/navigation.js" defer></script>
 </head>
 <body>
 
-<header>
-  <h1>Kampala Chamber of Commerce</h1>
-  <nav>
-    <ul>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Events</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
+<header class="container">
+  <img src="images/chamber.jpg" alt="Chamber logo">
+  <span>Chamber of Commerce</span>
+  <button id="menu" aria-label="Menu">☰</button>
 </header>
 
-<main>
-  <section>
-    <h2>Member Directory</h2>
-    <div class="view-toggle">
-      <button id="gridView">Grid View</button>
-      <button id="listView">List View</button>
-    </div>
-    <div id="membersContainer" class="grid"></div>
-  </section>
+<nav class="container" id="nav">
+  <ul>
+    <li><a href="../index.html">Home</a></li>
+    <li><a href="directory.html" class="active">Directory</a></li>
+    <li><a href="../final/index.html">Final</a></li>
+  </ul>
+</nav>
+
+<main class="container">
+  <h1>Member Directory</h1>
+
+  <div class="view-controls">
+    <button id="gridView">Grid View</button>
+    <button id="listView">List View</button>
+  </div>
+
+  <div id="members" class="member-container">
+    <!-- Members dynamically loaded here -->
+  </div>
 </main>
 
-<footer>
-  <p>© <span id="currentYear"></span> Akena Ivan | WDD 231 | Last modified: <span id="lastModified"></span></p>
+<footer class="container">
+  <div class="social-links">
+    <a href="https://github.com/ivanakena83" target="_blank" rel="noopener">
+      <img src="images/github.png" alt="GitHub">
+    </a>
+    <a href="https://www.linkedin.com/in/akena-ivan83" target="_blank" rel="noopener">
+      <img src="images/linkedin.png" alt="LinkedIn">
+    </a>
+  </div>
+  <p>© <span id="year"></span> Akena Ivan | WDD 231</p>
+  <p id="lastModified"></p>
 </footer>
 
-<script src="js/directory.js" defer></script>
 </body>
 </html>

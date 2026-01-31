@@ -1,0 +1,37 @@
+@media (min-width: 768px) {
+  nav ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  .member-container.grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .member-card {
+    flex: 1 1 calc(33% - 1rem);
+    text-align: center;
+  }
+
+  .member-card img {
+    max-width: 120px;
+  }
+
+  .member-container.list .member-card {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    padding: 1rem;
+  }
+
+  .member-container.list .member-card img {
+    margin-right: 1rem;
+    margin-bottom: 0;
+  }
+
+  footer .social-links {
+    gap: 2rem;
+  }
+}

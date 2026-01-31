@@ -1,0 +1,9 @@
+[
+  {"name":"Sunny Cafe","address":"123 Main Street","phone":"(555) 123-4567","website":"https://sunnycafe.example.com","image":"sunnycafe.jpg","level":3},
+  {"name":"Tech Solutions Ltd","address":"456 Industrial Road","phone":"(555) 234-5678","website":"https://techsolutions.example.com","image":"techsolutions.jpg","level":2},
+  {"name":"Green Grocery","address":"789 Market Avenue","phone":"(555) 345-6789","website":"https://greengrocery.example.com","image":"greengrocery.jpg","level":1},
+  {"name":"Book Haven","address":"101 Library Lane","phone":"(555) 456-7890","website":"https://bookhaven.example.com","image":"bookhaven.jpg","level":3},
+  {"name":"Fitness Pro Gym","address":"202 Fitness Blvd","phone":"(555) 567-8901","website":"https://fitnesspro.example.com","image":"fitnesspro.jpg","level":2},
+  {"name":"Artistic Creations","address":"303 Art Street","phone":"(555) 678-9012","website":"https://artisticcreations.example.com","image":"artisticcreations.jpg","level":1},
+  {"name":"Baker's Delight","address":"404 Bakery Rd","phone":"(555) 789-0123","website":"https://bakersdelight.example.com","image":"bakersdelight.jpg","level":3}
+]
