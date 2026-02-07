@@ -16,9 +16,7 @@ header, footer {
   color: white;
 }
 
-/* ================================
-   HEADER
-================================ */
+/* HEADER */
 .header-content {
   display: flex;
   align-items: center;
@@ -33,9 +31,7 @@ header, footer {
   left: 1rem;
 }
 
-/* ================================
-   NAVIGATION (FULL FIX)
-================================ */
+/* NAVIGATION */
 .main-nav {
   background: #333;
 }
@@ -48,7 +44,6 @@ header, footer {
   justify-content: center;
 }
 
-/* links always visible */
 .main-nav ul li a {
   display: block;
   padding: 0.8rem 1.5rem;
@@ -59,22 +54,18 @@ header, footer {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-/* hover */
 .main-nav ul li a:hover {
   background: #004aad;
   color: #ffffff;
 }
 
-/* active page */
 .main-nav ul li a.active {
   background: #f4b400;
   color: #000;
   border-radius: 4px;
 }
 
-/* ================================
-   HERO
-================================ */
+/* HERO */
 .hero {
   position: relative;
   height: 250px;
@@ -99,9 +90,7 @@ header, footer {
   padding: 1rem;
 }
 
-/* ================================
-   INTRO BOX
-================================ */
+/* INTRO BOX */
 .intro-box {
   display: flex;
   flex-direction: column;
@@ -134,84 +123,55 @@ header, footer {
   font-weight: bold;
 }
 
-/* ================================
-   COMMUNITY GRID
-================================ */
-.community {
-  margin-top: 2rem;
-}
-
-.community h2 {
-  text-align: center;
-}
-
-.community-grid {
+/* MEMBERSHIP CARDS */
+.membership-cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 1rem;
+  margin-top: 1rem;
 }
 
-.community-box {
-  background: #eaeaea;
+.card {
   padding: 1rem;
-  text-align: center;
-}
-
-/* ================================
-   SPOTLIGHTS - SMALLER BOXES
-================================ */
-.member-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-}
-
-.member-card {
-  padding: 0.5rem;
   background: #f4f4f4;
   text-align: center;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
 }
 
-/* ================================
-   DIRECTORY SPECIFIC
-================================ */
-.list-view {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.member-card img {
+/* MODALS */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
   width: 100%;
-  height: auto;
-  object-fit: cover;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.6);
 }
 
-/* ================================
-   VIEW TOGGLE BUTTONS
-================================ */
-.view-toggle {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-bottom: 1rem;
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 1rem;
+  border-radius: 6px;
+  width: 90%;
+  max-width: 500px;
 }
 
-.view-toggle button {
-  padding: 0.4rem 0.8rem;
-  border: none;
-  background: #004aad;
-  color: white;
+.modal .close {
+  float: right;
+  font-size: 1.5rem;
   cursor: pointer;
 }
 
-.view-toggle button:hover {
-  background: #003580;
-}
-
-/* ================================
-   FOOTER SOCIALS
-================================ */
+/* FOOTER SOCIALS */
 .socials {
   display: flex;
   justify-content: center;
@@ -226,9 +186,4 @@ header, footer {
 
 .socials img:hover {
   transform: scale(1.15);
-}
-
-/* Hide member images when in list view */
-#member-directory.list-view .member-card img {
-  display: none;
 }
