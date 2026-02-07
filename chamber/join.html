@@ -50,60 +50,68 @@
   <main class="container join-main">
     <h2>Membership Application</h2>
 
-    <form method="get" action="thankyou.html" class="membership-form">
+   <form method="get" action="thankyou.html" class="membership-form">
 
-      <label>
-        First Name:
-        <input type="text" name="firstName" required autocomplete="given-name" title="Enter your first name">
-      </label>
+  <label>
+    First Name:
+    <input type="text" name="firstName" required autocomplete="given-name" title="Enter your first name">
+  </label>
 
-      <label>
-        Last Name:
-        <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name">
-      </label>
+  <label>
+    Last Name:
+    <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name">
+  </label>
 
-      <label>
-        Organizational Title:
-        <input type="text" name="orgTitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" placeholder="Ex: Marketing Director" title="Enter your organization or job title">
-      </label>
+  <label>
+    Organizational Title:
+    <input type="text" name="orgTitle" autocomplete="organization-title" 
+           pattern="[A-Za-z\s\-]{7,}" 
+           placeholder="Ex: Marketing Director" 
+           title="Enter your organization or job title">
+  </label>
 
-      <label>
-        Email Address:
-        <input type="email" name="email" required autocomplete="email" placeholder="example@email.com" title="Enter your email address">
-      </label>
+  <label>
+    Email Address:
+    <input type="email" name="email" required autocomplete="email" 
+           placeholder="example@email.com" 
+           title="Enter your email address">
+  </label>
 
-      <label>
-        Mobile Number:
-        <input type="tel" name="mobile" required autocomplete="tel" title="Enter your mobile phone number">
-      </label>
+  <label>
+    Mobile Phone:
+    <input type="tel" name="mobile" required autocomplete="tel" title="Enter your mobile phone number">
+  </label>
 
-      <label>
-        Organization/Business Name:
-        <input type="text" name="businessName" required autocomplete="organization" title="Enter your organization or business name">
-      </label>
+  <label>
+    Organization/Business Name:
+    <input type="text" name="businessName" required autocomplete="organization" 
+           title="Enter your organization or business name">
+  </label>
 
-      <label>
-        Membership Level:
-        <select name="membershipLevel" required title="Select a membership level">
-          <option value="">Select a level</option>
-          <option value="np">NP Membership (Non-profit, no fee)</option>
-          <option value="bronze">Bronze Membership</option>
-          <option value="silver">Silver Membership</option>
-          <option value="gold">Gold Membership</option>
-        </select>
-      </label>
+  <label>
+    Membership Level:
+    <select name="membershipLevel" required title="Select a membership level">
+      <option value="">Select a level</option>
+      <option value="np">NP Membership (Non-profit, no fee)</option>
+      <option value="bronze">Bronze Membership</option>
+      <option value="silver">Silver Membership</option>
+      <option value="gold">Gold Membership</option>
+    </select>
+  </label>
 
-      <label>
-        Business Description:
-        <textarea name="businessDesc" title="Enter a short description of your business"></textarea>
-      </label>
+  <label>
+    Organization Description:
+    <textarea name="businessDesc" title="Enter a short description of your organization"></textarea>
+  </label>
 
-      <!-- Timestamp hidden field -->
-      <input type="hidden" name="timestamp" id="timestamp">
+  <!-- Timestamp hidden field -->
+  <input type="hidden" name="timestamp" id="timestamp">
 
-      <!-- Submit button -->
-      <button type="submit">Submit Application</button>
-    </form>
+  <!-- Submit button -->
+  <button type="submit">Submit Application</button>
+
+</form>
+
 
     <!-- Membership cards -->
     <section class="membership-cards">
