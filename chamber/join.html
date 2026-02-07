@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO -->
   <meta name="description" content="Join the Kampala Chamber of Commerce through our membership form.">
   <meta name="author" content="Akena Ivan">
   <title>Join the Chamber | Kampala Chamber of Commerce</title>
 
-  <link rel="icon" href="images/hero.jpg">
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/hero.jpg">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
@@ -48,44 +51,40 @@
     <h2>Membership Application</h2>
 
     <form method="get" action="thankyou.html" class="membership-form">
-      
+
       <label>
         First Name:
-        <input type="text" name="firstName" required autocomplete="given-name">
+        <input type="text" name="firstName" required autocomplete="given-name" title="Enter your first name">
       </label>
 
       <label>
         Last Name:
-        <input type="text" name="lastName" required autocomplete="family-name">
+        <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name">
       </label>
 
       <label>
         Organizational Title:
-        <input type="text" name="orgTitle"
-               autocomplete="organization-title"
-               pattern="[A-Za-z\s\-]{7,}" 
-               placeholder="Ex: Marketing Director">
+        <input type="text" name="orgTitle" autocomplete="organization-title" pattern="[A-Za-z\s\-]{7,}" placeholder="Ex: Marketing Director" title="Enter your organization or job title">
       </label>
 
       <label>
         Email Address:
-        <input type="email" name="email" required
-               autocomplete="email" placeholder="example@email.com">
+        <input type="email" name="email" required autocomplete="email" placeholder="example@email.com" title="Enter your email address">
       </label>
 
       <label>
         Mobile Number:
-        <input type="tel" name="mobile" required autocomplete="tel">
+        <input type="tel" name="mobile" required autocomplete="tel" title="Enter your mobile phone number">
       </label>
 
       <label>
         Organization/Business Name:
-        <input type="text" name="businessName" required autocomplete="organization">
+        <input type="text" name="businessName" required autocomplete="organization" title="Enter your organization or business name">
       </label>
 
       <label>
         Membership Level:
-        <select name="membershipLevel" required>
+        <select name="membershipLevel" required title="Select a membership level">
           <option value="">Select a level</option>
           <option value="np">NP Membership (Non-profit, no fee)</option>
           <option value="bronze">Bronze Membership</option>
@@ -96,13 +95,14 @@
 
       <label>
         Business Description:
-        <textarea name="businessDesc"></textarea>
+        <textarea name="businessDesc" title="Enter a short description of your business"></textarea>
       </label>
 
       <!-- Timestamp hidden field -->
       <input type="hidden" name="timestamp" id="timestamp">
 
-      <input type="submit" value="Submit Application">
+      <!-- Submit button -->
+      <button type="submit">Submit Application</button>
     </form>
 
     <!-- Membership cards -->

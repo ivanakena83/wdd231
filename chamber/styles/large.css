@@ -1,33 +1,54 @@
+/* ================================
+   LARGE SCREEN STYLES
+   Min-width: 768px
+================================ */
+
 @media (min-width: 768px) {
 
+  /* INTRO BOX */
   .intro-box {
+    display: flex;
     flex-direction: row;
     gap: 1.5rem;
   }
 
-  .intro-image, .intro-text {
+  .intro-image,
+  .intro-text {
     flex: 1;
   }
 
   .intro-image img {
+    width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
+  /* COMMUNITY GRID */
   .community-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  /* Member container grid smaller */
-  .member-container {
+    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
   }
 
+  /* MEMBER CONTAINER GRID */
+  .member-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on large screens */
+    gap: 1.5rem;
+  }
+
+  .member-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* HERO */
   .hero {
     height: 400px;
   }
 
+  /* FOOTER */
   .footer-bottom {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -38,12 +59,8 @@
     justify-content: center;
   }
 
-  /* DIRECTORY */
-  .member-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-/* Hide member images when in list view */
-#member-directory.list-view .member-card img {
+  /* DIRECTORY LIST VIEW */
+  #member-directory.list-view .member-card img {
     display: none;
+  }
 }
