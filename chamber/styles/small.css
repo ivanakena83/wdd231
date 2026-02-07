@@ -1,4 +1,6 @@
-/* GENERAL STYLES */
+/* ================================
+   GENERAL STYLES
+================================ */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -14,7 +16,9 @@ header, footer {
   color: white;
 }
 
-/* HEADER */
+/* ================================
+   HEADER
+================================ */
 .header-content {
   display: flex;
   align-items: center;
@@ -29,29 +33,48 @@ header, footer {
   left: 1rem;
 }
 
-/* NAV */
-nav ul {
+/* ================================
+   NAVIGATION (FULL FIX)
+================================ */
+.main-nav {
+  background: #333;
+}
+
+.main-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
   justify-content: center;
-  background: #333;
 }
 
-nav ul li a {
+/* links always visible */
+.main-nav ul li a {
   display: block;
   padding: 0.8rem 1.5rem;
-  color: white;
+  color: #ffffff !important;
   text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
-nav ul li a.active,
-nav ul li a:hover {
+/* hover */
+.main-nav ul li a:hover {
   background: #004aad;
+  color: #ffffff;
 }
 
-/* HERO */
+/* active page */
+.main-nav ul li a.active {
+  background: #f4b400;
+  color: #000;
+  border-radius: 4px;
+}
+
+/* ================================
+   HERO
+================================ */
 .hero {
   position: relative;
   height: 250px;
@@ -76,7 +99,9 @@ nav ul li a:hover {
   padding: 1rem;
 }
 
-/* INTRO BOX */
+/* ================================
+   INTRO BOX
+================================ */
 .intro-box {
   display: flex;
   flex-direction: column;
@@ -109,7 +134,9 @@ nav ul li a:hover {
   font-weight: bold;
 }
 
-/* COMMUNITY GRID */
+/* ================================
+   COMMUNITY GRID
+================================ */
 .community {
   margin-top: 2rem;
 }
@@ -130,7 +157,9 @@ nav ul li a:hover {
   text-align: center;
 }
 
-/* SPOTLIGHTS - SMALLER BOXES */
+/* ================================
+   SPOTLIGHTS - SMALLER BOXES
+================================ */
 .member-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -143,7 +172,9 @@ nav ul li a:hover {
   text-align: center;
 }
 
-/* DIRECTORY SPECIFIC */
+/* ================================
+   DIRECTORY SPECIFIC
+================================ */
 .list-view {
   display: flex;
   flex-direction: column;
@@ -156,7 +187,9 @@ nav ul li a:hover {
   object-fit: cover;
 }
 
-/* VIEW TOGGLE BUTTONS */
+/* ================================
+   VIEW TOGGLE BUTTONS
+================================ */
 .view-toggle {
   display: flex;
   justify-content: center;
@@ -176,7 +209,9 @@ nav ul li a:hover {
   background: #003580;
 }
 
-/* FOOTER SOCIALS */
+/* ================================
+   FOOTER SOCIALS
+================================ */
 .socials {
   display: flex;
   justify-content: center;
@@ -192,7 +227,8 @@ nav ul li a:hover {
 .socials img:hover {
   transform: scale(1.15);
 }
+
 /* Hide member images when in list view */
 #member-directory.list-view .member-card img {
-    display: none;
+  display: none;
 }

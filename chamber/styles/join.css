@@ -90,3 +90,29 @@ footer .socials a img {
 footer .socials a img:hover {
   transform: scale(1.15);
 }
+.main-nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 10px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s ease;
+}
+
+.main-nav a:hover {
+  background-color: #004080;
+  color: white;
+}
+
+.main-nav a.active {
+  background-color: #004080;
+  color: white;
+}
