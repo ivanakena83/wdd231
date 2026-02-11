@@ -124,3 +124,118 @@ header, footer {
 .socials img:hover {
   transform: scale(1.15);
 }
+/* HERO TEXT AT TOP OF IMAGE */
+.top-hero-text {
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+}
+
+.top-hero-text h2 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.top-hero-text p {
+  color: #f4b400;
+  margin: 0.3rem 0 0 0;
+  font-size: 1.1rem;
+}
+/* HERO TEXT CENTERED IN IMAGE */
+.centered-hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0,0,0,0.65);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* force single line */
+.centered-hero h2 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 1.4rem;
+  white-space: nowrap;
+}
+/* smaller spotlight cards on mobile */
+.member-card {
+  width: 95%;
+  padding: 0.7rem;
+}
+
+.member-card img {
+  width: 65%;
+  max-width: 160px;
+}
+/* CYLINDRICAL JOIN BUTTON */
+.cta {
+  display: inline-block;
+  background: linear-gradient(145deg, #f4b400, #ffd84d);
+  color: #000;
+  padding: 0.9rem 2.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px; /* makes it cylindrical/pill shape */
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+/* hover effect */
+.cta:hover {
+  background: linear-gradient(145deg, #004aad, #0066ff);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+/* LIGHT BLUE BACKGROUND FOR EVENTS & WEATHER */
+.community-box {
+  background: #e6f2ff; /* light blue */
+}
+
+/* BLACK-ISH BACKGROUND FOR SPOTLIGHT SECTION */
+#spotlights {
+  background: #1a1a1a;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+}
+#spotlights .member-card {
+  background: #2b2b2b;
+  color: #ffffff;
+}
+
+#spotlights h3,
+#spotlights p {
+  color: #ffffff;
+}
+/* List view on mobile stacked vertically */
+#member-directory.list-view .member-card {
+  width: 100%;
+  padding: 0.7rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+/* Hide images */
+#member-directory.list-view .member-card img {
+  display: none;
+}
+
+#member-directory.list-view .member-card h3 {
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+#member-directory.list-view .member-card p {
+  font-size: 0.85rem;
+  margin: 0;
+}
