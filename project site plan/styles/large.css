@@ -1,0 +1,32 @@
+/* large.css */
+@media (min-width: 768px) {
+
+  body {
+    font-size: 1.05rem;
+  }
+
+  section {
+    padding: 2rem 3rem;
+  }
+
+  .wireframe {
+    padding: 2rem;
+    font-size: 1rem;
+  }
+
+  header, footer {
+    padding: 1.5rem 0;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}
