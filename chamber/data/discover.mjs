@@ -45,6 +45,6 @@ export const places = [
     name: "Business Networking",
     address: "Chamber events & hubs",
     description: "Connect with professionals, partners, and investors.",
-    image: "images/businesshub.jpg"
+    image: "images/business.jpg"
   }
 ];
