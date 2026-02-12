@@ -285,3 +285,74 @@
   height: auto;
   object-fit: cover;
 }
+
+@media (min-width: 1025px) {
+
+.discover-grid {
+  grid-template-areas:
+    "card1 card2"
+    "card3 card4"
+    "card5 card6"
+    "card7 card8";
+
+  max-width: 1200px;
+  margin: auto;
+}
+
+.card {
+  min-height: 450px;
+}
+
+/* hover desktop only */
+.card img:hover {
+  transform: scale(1.05);
+  transition: 0.3s ease;
+  filter: brightness(1.1);
+}
+
+}
+
+
+/* Discover Page Grid Layout */
+.discover-grid {
+  display: grid;
+  grid-template-areas:
+    "markets transport"
+    "tech tourism"
+    "education realestate"
+    "community networking";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.markets { grid-area: markets; }
+.transport { grid-area: transport; }
+.tech { grid-area: tech; }
+.tourism { grid-area: tourism; }
+.education { grid-area: education; }
+.realestate { grid-area: realestate; }
+.community { grid-area: community; }
+.networking { grid-area: networking; }
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 6px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Hover effect on large screens */
+@media (min-width: 1025px) {
+  .card img:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease;
+    filter: brightness(1.1);
+  }
+}
