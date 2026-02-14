@@ -1,13 +1,5 @@
-/* ===== MEDIUM SCREENS (641px to 1024px) ===== */
 @media screen and (min-width: 641px) and (max-width: 1024px) {
   .discover-grid {
-    display: grid;
-    grid-template-areas:
-      "card1 card2"
-      "card3 card4"
-      "card5 card6"
-      "card7 card8";
-    grid-template-columns: repeat(2, 1fr); /* exactly 2 columns */
-    gap: 1.5rem;
+    gap: 1rem; /* only adjust gap, layout already defined in small.css */
   }
 }

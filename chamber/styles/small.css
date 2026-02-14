@@ -4,15 +4,8 @@ body {
   margin: 0;
   line-height: 1.6;
 }
-
-.container {
-  padding: 1rem;
-}
-
-header, footer {
-  background: #004aad;
-  color: white;
-}
+.container { padding: 1rem; }
+header, footer { background: #004aad; color: white; }
 
 /* HEADER */
 .header-content {
@@ -22,18 +15,16 @@ header, footer {
   gap: 1rem;
   position: relative;
 }
-
 .logo {
   width: 50px;
   position: absolute;
   left: 1rem;
 }
 
-/* NAVIGATION */
+/* NAVIGATION – fixed contrast */
 .main-nav {
   background: #333;
 }
-
 .main-nav ul {
   list-style: none;
   padding: 0;
@@ -41,33 +32,23 @@ header, footer {
   display: flex;
   justify-content: center;
 }
-
 .main-nav ul li a {
   display: block;
   padding: 0.8rem 1.5rem;
-  color: #ffffff !important;
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
-
 .main-nav ul li a:hover {
   background: #004aad;
-  color: #ffffff;
 }
-
 .main-nav ul li a.active {
   background: #f4b400;
-  color: #000;
+  color: black;
   border-radius: 4px;
 }
 
-/* HERO SECTION (home) – keep as is */
-
-/* INTRO BOX (home) – keep as is */
-
-/* COMMUNITY / WEATHER (home) – keep as is */
-
-/* ===== DISCOVER GRID – 2 COLUMNS, 4 ROWS ===== */
+/* ===== DISCOVER GRID ===== */
 .discover-grid {
   display: grid;
   grid-template-areas:
@@ -89,11 +70,7 @@ header, footer {
   display: flex;
   flex-direction: column;
 }
-
-.card figure {
-  margin: 0 0 0.3rem 0;
-}
-
+.card figure { margin: 0 0 0.3rem 0; }
 .card img {
   width: 100%;
   height: 120px;
@@ -101,14 +78,12 @@ header, footer {
   border-radius: 4px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
-
 .card h2 {
   font-size: 1rem;
   margin: 0 0 0.3rem 0;
   color: #004aad;
   line-height: 1.2;
 }
-
 .card address {
   font-style: normal;
   background: #f4f4f4;
@@ -117,13 +92,11 @@ header, footer {
   margin: 0.3rem 0;
   font-size: 0.75rem;
 }
-
 .card p {
   margin: 0.3rem 0;
   font-size: 0.8rem;
   line-height: 1.3;
 }
-
 .card button {
   background: #004aad;
   color: white;
@@ -135,7 +108,6 @@ header, footer {
   font-weight: bold;
   font-size: 0.8rem;
 }
-
 .card button:hover {
   background: #002c6d;
 }
@@ -150,24 +122,22 @@ header, footer {
   border-radius: 4px;
 }
 
-/* SPOTLIGHTS SECTION (home) – single definition */
+/* SPOTLIGHTS SECTION (home) */
 #spotlights {
   background: #1a1a1a;
   padding: 2rem 1rem;
   border-radius: 8px;
 }
-
 #spotlights .member-card {
   background: #2b2b2b;
-  color: #ffffff;
+  color: white;
 }
-
 #spotlights h3,
 #spotlights p {
-  color: #ffffff;
+  color: white;
 }
 
-/* MEMBERSHIP CARDS (join page) – these are separate, keep as is */
+/* MEMBERSHIP CARDS (join page) – more specific */
 .membership-cards {
   display: grid;
   gap: 1rem;
@@ -175,16 +145,47 @@ header, footer {
   grid-template-columns: 1fr;
   animation: fadeIn 1s ease-in;
 }
-
-.card[data-modal] {   /* more specific to avoid conflict with discover cards */
+.card[data-modal] {
   background: #004aad;
   color: white;
   padding: 1rem;
   border-radius: 8px;
   text-align: center;
 }
+.card[data-modal] .info-link {
+  color: yellow;
+  text-decoration: underline;
+  cursor: pointer;
+}
 
-/* MODAL STYLES (join page) – keep as is */
+/* MODAL STYLES */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 10;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+.modal-content {
+  background: #fff;
+  margin: 10% auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  position: relative;
+}
+.modal-content .close {
+  position: absolute;
+  top: 0.5rem; right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
 /* FOOTER */
 .socials {
@@ -192,18 +193,16 @@ header, footer {
   justify-content: center;
   gap: 1.5rem;
 }
-
 .socials img {
   width: 36px;
   height: 36px;
   transition: transform 0.2s ease;
 }
-
 .socials img:hover {
   transform: scale(1.15);
 }
 
-/* CTA BUTTON (home) – keep as is */
+/* CTA BUTTON (home) */
 .cta {
   display: inline-block;
   background: linear-gradient(145deg, #f4b400, #ffd84d);
@@ -217,7 +216,6 @@ header, footer {
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
   transition: all 0.3s ease;
 }
-
 .cta:hover {
   background: linear-gradient(145deg, #004aad, #0066ff);
   color: #fff;
@@ -225,12 +223,12 @@ header, footer {
   box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
-/* COMMUNITY BOX (home) – keep as is */
+/* COMMUNITY BOX (home) */
 .community-box {
   background: #e6f2ff;
 }
 
-/* DIRECTORY LIST VIEW – keep as is */
+/* DIRECTORY LIST VIEW */
 #member-directory.list-view .member-card img {
   display: none;
 }
