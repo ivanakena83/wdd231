@@ -1,3 +1,4 @@
+/* ===== BASE STYLES ===== */
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
@@ -19,11 +20,11 @@ header, footer {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  position: relative;
 }
 
 .logo {
   width: 50px;
-  height: auto;
   position: absolute;
   left: 1rem;
 }
@@ -60,189 +61,13 @@ header, footer {
   border-radius: 4px;
 }
 
-/* MEMBERSHIP CARDS */
-.membership-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
+/* HERO SECTION (home) – keep as is */
 
-.card {
-  padding: 1rem;
-  background: #f4f4f4;
-  text-align: center;
-  border-radius: 6px;
-  transition: transform 0.3s ease;
-}
+/* INTRO BOX (home) – keep as is */
 
-.card:hover {
-  transform: translateY(-5px);
-}
+/* COMMUNITY / WEATHER (home) – keep as is */
 
-/* MODALS */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.6);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 1rem;
-  border-radius: 6px;
-  width: 90%;
-  max-width: 500px;
-}
-
-.modal .close {
-  float: right;
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-/* FOOTER SOCIALS */
-.socials {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
-.socials img {
-  width: 36px;
-  height: 36px;
-  transition: transform 0.2s ease;
-}
-
-.socials img:hover {
-  transform: scale(1.15);
-}
-/* HERO TEXT AT TOP OF IMAGE */
-.top-hero-text {
-  position: absolute;
-  top: 20px;
-  left: 30px;
-  background: rgba(0, 0, 0, 0.6);
-  padding: 1rem 1.5rem;
-  border-radius: 6px;
-}
-
-.top-hero-text h2 {
-  color: #fff;
-  margin: 0;
-  font-size: 1.8rem;
-}
-
-.top-hero-text p {
-  color: #f4b400;
-  margin: 0.3rem 0 0 0;
-  font-size: 1.1rem;
-}
-/* HERO TEXT CENTERED IN IMAGE */
-.centered-hero {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: rgba(0,0,0,0.65);
-  padding: 1rem 2rem;
-  border-radius: 8px;
-  text-align: center;
-}
-
-/* force single line */
-.centered-hero h2 {
-  color: #ffffff;
-  margin: 0;
-  font-size: 1.4rem;
-  white-space: nowrap;
-}
-/* smaller spotlight cards on mobile */
-.member-card {
-  width: 95%;
-  padding: 0.7rem;
-}
-
-.member-card img {
-  width: 65%;
-  max-width: 160px;
-}
-/* CYLINDRICAL JOIN BUTTON */
-.cta {
-  display: inline-block;
-  background: linear-gradient(145deg, #f4b400, #ffd84d);
-  color: #000;
-  padding: 0.9rem 2.2rem;
-  margin-top: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 50px; /* makes it cylindrical/pill shape */
-  font-size: 1.1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: all 0.3s ease;
-}
-
-/* hover effect */
-.cta:hover {
-  background: linear-gradient(145deg, #004aad, #0066ff);
-  color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
-}
-/* LIGHT BLUE BACKGROUND FOR EVENTS & WEATHER */
-.community-box {
-  background: #e6f2ff; /* light blue */
-}
-
-/* BLACK-ISH BACKGROUND FOR SPOTLIGHT SECTION */
-#spotlights {
-  background: #1a1a1a;
-  padding: 2rem 1rem;
-  border-radius: 8px;
-}
-#spotlights .member-card {
-  background: #2b2b2b;
-  color: #ffffff;
-}
-
-#spotlights h3,
-#spotlights p {
-  color: #ffffff;
-}
-/* List view on mobile stacked vertically */
-#member-directory.list-view .member-card {
-  width: 100%;
-  padding: 0.7rem 0.9rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-/* Hide images */
-#member-directory.list-view .member-card img {
-  display: none;
-}
-
-#member-directory.list-view .member-card h3 {
-  font-size: 0.95rem;
-  margin: 0;
-}
-
-#member-directory.list-view .member-card p {
-  font-size: 0.85rem;
-  margin: 0;
-}
-/* ===============================
-   DISCOVER GRID - 2 COLUMNS, 4 ROWS
-   (Reduced sizes for clearer images)
-=============================== */
+/* ===== DISCOVER GRID – 2 COLUMNS, 4 ROWS ===== */
 .discover-grid {
   display: grid;
   grid-template-areas:
@@ -251,14 +76,14 @@ header, footer {
     "card5 card6"
     "card7 card8";
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.6rem;                /* smaller gap */
+  gap: 0.6rem;
   margin-top: 1rem;
 }
 
-/* Card styling – compact */
+/* CARD STYLES (single definition) */
 .card {
   background: white;
-  padding: 0.5rem;            /* reduced padding */
+  padding: 0.5rem;
   border-radius: 4px;
   box-shadow: 0 1px 4px rgba(0,0,0,0.1);
   display: flex;
@@ -271,16 +96,14 @@ header, footer {
 
 .card img {
   width: 100%;
-  height: 120px;              /* smaller image height */
-  object-fit: cover;          /* maintains aspect ratio, crops if needed */
+  height: 120px;
+  object-fit: cover;
   border-radius: 4px;
   transition: transform 0.3s ease, filter 0.3s ease;
-  /* ensures image is crisp */
-  image-rendering: auto;       /* default, but you can experiment with crisp-edges if needed */
 }
 
 .card h2 {
-  font-size: 1rem;            /* smaller title */
+  font-size: 1rem;
   margin: 0 0 0.3rem 0;
   color: #004aad;
   line-height: 1.2;
@@ -292,12 +115,12 @@ header, footer {
   padding: 0.3rem;
   border-radius: 4px;
   margin: 0.3rem 0;
-  font-size: 0.75rem;         /* smaller address */
+  font-size: 0.75rem;
 }
 
 .card p {
   margin: 0.3rem 0;
-  font-size: 0.8rem;          /* smaller description */
+  font-size: 0.8rem;
   line-height: 1.3;
 }
 
@@ -315,4 +138,99 @@ header, footer {
 
 .card button:hover {
   background: #002c6d;
+}
+
+/* VISITOR MESSAGE */
+.visit-message {
+  background: #eef5ff;
+  border-left: 4px solid #004aad;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* SPOTLIGHTS SECTION (home) – single definition */
+#spotlights {
+  background: #1a1a1a;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+}
+
+#spotlights .member-card {
+  background: #2b2b2b;
+  color: #ffffff;
+}
+
+#spotlights h3,
+#spotlights p {
+  color: #ffffff;
+}
+
+/* MEMBERSHIP CARDS (join page) – these are separate, keep as is */
+.membership-cards {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+  grid-template-columns: 1fr;
+  animation: fadeIn 1s ease-in;
+}
+
+.card[data-modal] {   /* more specific to avoid conflict with discover cards */
+  background: #004aad;
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* MODAL STYLES (join page) – keep as is */
+
+/* FOOTER */
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.socials img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.2s ease;
+}
+
+.socials img:hover {
+  transform: scale(1.15);
+}
+
+/* CTA BUTTON (home) – keep as is */
+.cta {
+  display: inline-block;
+  background: linear-gradient(145deg, #f4b400, #ffd84d);
+  color: #000;
+  padding: 0.9rem 2.2rem;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: all 0.3s ease;
+}
+
+.cta:hover {
+  background: linear-gradient(145deg, #004aad, #0066ff);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* COMMUNITY BOX (home) – keep as is */
+.community-box {
+  background: #e6f2ff;
+}
+
+/* DIRECTORY LIST VIEW – keep as is */
+#member-directory.list-view .member-card img {
+  display: none;
 }

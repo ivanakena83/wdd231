@@ -290,13 +290,17 @@
     gap: 1.5rem;
   }
 }
-/* =============================
-   HOVER EFFECT (desktop only)
-============================= */
-@media (min-width: 1025px) {
-  .card img:hover {
-    transform: scale(1.04);
-    transition: 0.3s ease;
+@media screen and (min-width: 1025px) {
+  /* Hover effect only on large screens */
+  .discover-grid img:hover {
+    transform: scale(1.05);
     filter: brightness(1.1);
+    box-shadow: 0 8px 16px rgba(0,74,173,0.3);
+    transition: all 0.3s ease;
+  }
+
+  /* Optional: increase gap for large screens */
+  .discover-grid {
+    gap: 1rem;
   }
 }
