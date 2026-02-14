@@ -10,12 +10,6 @@
   <!-- Favicon -->
   <link rel="icon" href="images/hero.jpg">
 
-  <!-- Open Graph meta tags -->
-  <meta property="og:title" content="Kampala Chamber of Commerce | Discover">
-  <meta property="og:description" content="Explore culture, attractions, and business opportunities in Kampala.">
-  <meta property="og:image" content="images/kampala.jpg">
-  <meta property="og:url" content="https://yourwebsiteurl.com/discover.html">
-
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,11 +20,9 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
 
-<!-- JS -->
-<script type="module" src="scripts/discover.js" defer></script>
-<script src="scripts/year.js" defer></script>
-
-
+  <!-- JS -->
+  <script type="module" src="scripts/discover.js" defer></script>
+</head>
 <body>
 
 <header class="container header">
@@ -51,67 +43,14 @@
 
 <main class="container">
 
-  <!-- Discover Page Introduction -->
   <section>
     <h2>Discover Kampala</h2>
-    <p>
-      Explore Kampala’s vibrant culture, attractions, and economic opportunities.
-      Learn more about the places, people, and developments shaping the city.
-    </p>
-    <p id="visit-message"></p>
+    <p>Explore Kampala’s vibrant culture, attractions, and economic opportunities. Learn more about the places, people, and developments shaping the city.</p>
+    <p id="visitMessage"></p>  <!-- ID matches discover.js -->
   </section>
 
-  <!-- Discover Grid: 2 columns × 4 rows -->
-  <section class="discover-grid">
-
-    <article class="card markets">
-      <img src="images/greens.jpg" alt="Local markets in Kampala" loading="lazy">
-      <h3>Local Markets</h3>
-      <p>Experience Kampala’s vibrant trade and community business culture.</p>
-    </article>
-
-    <article class="card transport">
-      <img src="images/transport.jpg" alt="Transport systems" loading="lazy">
-      <h3>Transport & Infrastructure</h3>
-      <p>Explore mobility and development supporting business growth.</p>
-    </article>
-
-    <article class="card tech">
-      <img src="images/techhub.jpg" alt="Technology innovation" loading="lazy">
-      <h3>Innovation & Technology</h3>
-      <p>See how startups and digital solutions are shaping the economy.</p>
-    </article>
-
-    <article class="card tourism">
-      <img src="images/tourism.jpg" alt="Tourism attractions" loading="lazy">
-      <h3>Tourism & Culture</h3>
-      <p>Discover heritage sites and tourism investment opportunities.</p>
-    </article>
-
-    <article class="card education">
-      <img src="images/education.jpg" alt="Education institutions" loading="lazy">
-      <h3>Education & Skills</h3>
-      <p>Institutions supporting workforce and entrepreneurial development.</p>
-    </article>
-
-    <article class="card realestate">
-      <img src="images/realestate.jpg" alt="Real estate developments" loading="lazy">
-      <h3>Real Estate Growth</h3>
-      <p>Urban expansion creating new business and investment spaces.</p>
-    </article>
-
-    <article class="card community">
-      <img src="images/community.jpg" alt="Community initiatives" loading="lazy">
-      <h3>Community Initiatives</h3>
-      <p>Programs empowering entrepreneurs and small businesses.</p>
-    </article>
-
-    <article class="card networking">
-      <img src="images/business.jpg" alt="Business networking" loading="lazy">
-      <h3>Business Networking</h3>
-      <p>Connect with professionals, partners, and investors.</p>
-    </article>
-
+  <section id="discoverCards" class="discover-grid">  <!-- id added for JS -->
+    <!-- Cards will be injected here -->
   </section>
 
 </main>
@@ -132,5 +71,8 @@
   <p class="footer-copy">© <span id="year"></span> Akena Ivan | WDD 231</p>
 </footer>
 
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>

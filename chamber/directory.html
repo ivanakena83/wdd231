@@ -7,18 +7,24 @@
   <meta name="author" content="Akena Ivan">
   <title>Kampala Chamber of Commerce | Directory</title>
 
+  <!-- Favicon -->
   <link rel="icon" href="images/hero.jpg">
 
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/large.css">
 
+  <!-- JS -->
   <script src="scripts/directory.js" defer></script>
 </head>
-
 <body>
+
 <header class="container header">
   <div class="header-content">
     <img src="images/chamber.jpg" alt="Kampala Chamber of Commerce Logo" class="logo">
@@ -29,47 +35,41 @@
 <nav class="container main-nav">
   <ul>
     <li><a href="index.html">Home</a></li>
-    <li><a href="directory.html">Directory</a></li>
+    <li><a href="directory.html" class="active">Directory</a></li>
     <li><a href="discover.html">Discover</a></li>
     <li><a href="join.html">Join</a></li>
   </ul>
 </nav>
 
-
 <main class="container">
-  <section class="community">
+  <section>
     <h2>Member Directory</h2>
-
     <div class="view-toggle">
       <button id="grid-view">Grid View</button>
       <button id="list-view">List View</button>
     </div>
-
     <div id="member-directory" class="community-grid grid-view"></div>
   </section>
 </main>
 
 <footer class="container footer">
-  <div class="footer-info">
-    <p>📍 Plot 12, Kampala Road, Kampala, Uganda</p>
-    <p>📧 info@kampalachamber.org</p>
-    <p>📞 +256 700 123 456</p>
-     <p>© <span id="year"></span> Akena Ivan | WDD 231 | Last Modified: <span id="last-modified"></span></p>
-  </div>
-
   <div class="footer-bottom">
+    <div class="footer-info">
+      <p>📍 Plot 12, Kampala Road, Kampala, Uganda</p>
+      <p>📧 info@kampalachamber.org</p>
+      <p>📞 +256 700 123 456</p>
+    </div>
     <div class="socials">
       <a href="https://facebook.com/ivanakena" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
       <a href="https://linkedin.com/in/akena-ivan83" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
       <a href="https://github.com/akenaivan83" target="_blank"><img src="images/github.png" alt="GitHub"></a>
     </div>
-   
   </div>
+  <p class="footer-copy">© <span id="year"></span> Akena Ivan | WDD 231</p>
 </footer>
 
 <script>
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("last-modified").textContent = document.lastModified;
+  document.getElementById('year').textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

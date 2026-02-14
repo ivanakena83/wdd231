@@ -3,19 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- SEO -->
   <meta name="description" content="Join the Kampala Chamber of Commerce through our membership form.">
   <meta name="author" content="Akena Ivan">
-  <title>Join the Chamber | Kampala Chamber of Commerce</title>
+  <title>Kampala Chamber of Commerce | Join</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/hero.jpg">
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Arial:wght@400;700&display=swap" rel="stylesheet">
-
-  <!-- Favicon -->
-  <link rel="icon" href="images/hero.jpg">
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/normalize.css">
@@ -26,195 +24,160 @@
   <!-- JS -->
   <script src="scripts/join.js" defer></script>
 </head>
-
 <body>
 
-  <!-- HEADER -->
-  <header class="container header">
-    <div class="header-content">
-      <img src="images/chamber.jpg" alt="Kampala Chamber of Commerce Logo" class="logo">
-      <h1>Kampala Chamber of Commerce</h1>
+<header class="container header">
+  <div class="header-content">
+    <img src="images/chamber.jpg" alt="Kampala Chamber of Commerce Logo" class="logo">
+    <h1>Kampala Chamber of Commerce</h1>
+  </div>
+</header>
+
+<nav class="container main-nav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="directory.html">Directory</a></li>
+    <li><a href="discover.html">Discover</a></li>
+    <li><a href="join.html" class="active">Join</a></li>
+  </ul>
+</nav>
+
+<main class="container join-main">
+  <h2>Membership Application</h2>
+
+  <form method="get" action="thankyou.html" class="membership-form">
+    <label>
+      First Name:
+      <input type="text" name="firstName" required autocomplete="given-name" title="Enter your first name">
+    </label>
+    <label>
+      Last Name:
+      <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name">
+    </label>
+    <label>
+      Organizational Title:
+      <input type="text" name="orgTitle" autocomplete="organization-title"
+             pattern="[A-Za-z\s\-]{7,}"
+             placeholder="Ex: Marketing Director"
+             title="Enter your organization or job title">
+    </label>
+    <label>
+      Email Address:
+      <input type="email" name="email" required autocomplete="email"
+             placeholder="example@email.com"
+             title="Enter your email address">
+    </label>
+    <label>
+      Mobile Phone:
+      <input type="tel" name="mobile" required autocomplete="tel" title="Enter your mobile phone number">
+    </label>
+    <label>
+      Organization/Business Name:
+      <input type="text" name="businessName" required autocomplete="organization"
+             title="Enter your organization or business name">
+    </label>
+    <label>
+      Membership Level:
+      <select name="membershipLevel" required title="Select a membership level">
+        <option value="">Select a level</option>
+        <option value="np">NP Membership (Non-profit, no fee)</option>
+        <option value="bronze">Bronze Membership</option>
+        <option value="silver">Silver Membership</option>
+        <option value="gold">Gold Membership</option>
+      </select>
+    </label>
+    <label>
+      Organization Description:
+      <textarea name="businessDesc" title="Enter a short description of your organization"></textarea>
+    </label>
+    <input type="hidden" name="timestamp" id="timestamp">
+    <button type="submit">Submit Application</button>
+  </form>
+
+  <section class="membership-cards">
+    <div class="card" data-modal="modal-np">
+      <h3>NP Membership</h3>
+      <a href="#" class="info-link">Learn More</a>
     </div>
-  </header>
-
-  <!-- NAVIGATION -->
-  <nav class="container main-nav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="directory.html">Directory</a></li>
-      <li><a href="discover.html">Discover</a></li>
-      <li><a href="join.html">Join</a></li>
-    </ul>
-  </nav>
-
-  <!-- MAIN -->
-  <main class="container join-main">
-    <h2>Membership Application</h2>
-
-   <form method="get" action="thankyou.html" class="membership-form">
-
-  <label>
-    First Name:
-    <input type="text" name="firstName" required autocomplete="given-name" title="Enter your first name">
-  </label>
-
-  <label>
-    Last Name:
-    <input type="text" name="lastName" required autocomplete="family-name" title="Enter your last name">
-  </label>
-
-  <label>
-    Organizational Title:
-    <input type="text" name="orgTitle" autocomplete="organization-title" 
-           pattern="[A-Za-z\s\-]{7,}" 
-           placeholder="Ex: Marketing Director" 
-           title="Enter your organization or job title">
-  </label>
-
-  <label>
-    Email Address:
-    <input type="email" name="email" required autocomplete="email" 
-           placeholder="example@email.com" 
-           title="Enter your email address">
-  </label>
-
-  <label>
-    Mobile Phone:
-    <input type="tel" name="mobile" required autocomplete="tel" title="Enter your mobile phone number">
-  </label>
-
-  <label>
-    Organization/Business Name:
-    <input type="text" name="businessName" required autocomplete="organization" 
-           title="Enter your organization or business name">
-  </label>
-
-  <label>
-    Membership Level:
-    <select name="membershipLevel" required title="Select a membership level">
-      <option value="">Select a level</option>
-      <option value="np">NP Membership (Non-profit, no fee)</option>
-      <option value="bronze">Bronze Membership</option>
-      <option value="silver">Silver Membership</option>
-      <option value="gold">Gold Membership</option>
-    </select>
-  </label>
-
-  <label>
-    Organization Description:
-    <textarea name="businessDesc" title="Enter a short description of your organization"></textarea>
-  </label>
-
-  <!-- Timestamp hidden field -->
-  <input type="hidden" name="timestamp" id="timestamp">
-
-  <!-- Submit button -->
-  <button type="submit">Submit Application</button>
-
-</form>
-
-
-    <!-- Membership cards -->
-    <section class="membership-cards">
-      <div class="card" data-modal="modal-np">
-        <h3>NP Membership</h3>
-        <a href="#" class="info-link">Learn More</a>
-      </div>
-
-      <div class="card" data-modal="modal-bronze">
-        <h3>Bronze Membership</h3>
-        <a href="#" class="info-link">Learn More</a>
-      </div>
-
-      <div class="card" data-modal="modal-silver">
-        <h3>Silver Membership</h3>
-        <a href="#" class="info-link">Learn More</a>
-      </div>
-
-      <div class="card" data-modal="modal-gold">
-        <h3>Gold Membership</h3>
-        <a href="#" class="info-link">Learn More</a>
-      </div>
-    </section>
-
-    <!-- Membership modals -->
-    <div class="modal" id="modal-np" role="dialog" aria-labelledby="modal-np-title" aria-hidden="true">
-      <div class="modal-content">
-        <span class="close" aria-label="Close">&times;</span>
-        <h3 id="modal-np-title">NP Membership Benefits</h3>
-        <ul>
-          <li>Community networking</li>
-          <li>Access to chamber events</li>
-        </ul>
-      </div>
+    <div class="card" data-modal="modal-bronze">
+      <h3>Bronze Membership</h3>
+      <a href="#" class="info-link">Learn More</a>
     </div>
-
-    <div class="modal" id="modal-bronze" role="dialog" aria-labelledby="modal-bronze-title" aria-hidden="true">
-      <div class="modal-content">
-        <span class="close" aria-label="Close">&times;</span>
-        <h3 id="modal-bronze-title">Bronze Membership Benefits</h3>
-        <ul>
-          <li>All NP benefits</li>
-          <li>Event discounts</li>
-          <li>Basic spotlight on homepage</li>
-        </ul>
-      </div>
+    <div class="card" data-modal="modal-silver">
+      <h3>Silver Membership</h3>
+      <a href="#" class="info-link">Learn More</a>
     </div>
-
-    <div class="modal" id="modal-silver" role="dialog" aria-labelledby="modal-silver-title" aria-hidden="true">
-      <div class="modal-content">
-        <span class="close" aria-label="Close">&times;</span>
-        <h3 id="modal-silver-title">Silver Membership Benefits</h3>
-        <ul>
-          <li>All Bronze benefits</li>
-          <li>Advanced spotlight on homepage</li>
-          <li>Special training sessions</li>
-        </ul>
-      </div>
+    <div class="card" data-modal="modal-gold">
+      <h3>Gold Membership</h3>
+      <a href="#" class="info-link">Learn More</a>
     </div>
+  </section>
 
-    <div class="modal" id="modal-gold" role="dialog" aria-labelledby="modal-gold-title" aria-hidden="true">
-      <div class="modal-content">
-        <span class="close" aria-label="Close">&times;</span>
-        <h3 id="modal-gold-title">Gold Membership Benefits</h3>
-        <ul>
-          <li>All Silver benefits</li>
-          <li>Premium homepage spotlight</li>
-          <li>VIP event access</li>
-        </ul>
-      </div>
+  <!-- Modals -->
+  <div class="modal" id="modal-np" role="dialog" aria-labelledby="modal-np-title" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" aria-label="Close">&times;</span>
+      <h3 id="modal-np-title">NP Membership Benefits</h3>
+      <ul>
+        <li>Community networking</li>
+        <li>Access to chamber events</li>
+      </ul>
     </div>
+  </div>
+  <div class="modal" id="modal-bronze" role="dialog" aria-labelledby="modal-bronze-title" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" aria-label="Close">&times;</span>
+      <h3 id="modal-bronze-title">Bronze Membership Benefits</h3>
+      <ul>
+        <li>All NP benefits</li>
+        <li>Event discounts</li>
+        <li>Basic spotlight on homepage</li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal" id="modal-silver" role="dialog" aria-labelledby="modal-silver-title" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" aria-label="Close">&times;</span>
+      <h3 id="modal-silver-title">Silver Membership Benefits</h3>
+      <ul>
+        <li>All Bronze benefits</li>
+        <li>Advanced spotlight on homepage</li>
+        <li>Special training sessions</li>
+      </ul>
+    </div>
+  </div>
+  <div class="modal" id="modal-gold" role="dialog" aria-labelledby="modal-gold-title" aria-hidden="true">
+    <div class="modal-content">
+      <span class="close" aria-label="Close">&times;</span>
+      <h3 id="modal-gold-title">Gold Membership Benefits</h3>
+      <ul>
+        <li>All Silver benefits</li>
+        <li>Premium homepage spotlight</li>
+        <li>VIP event access</li>
+      </ul>
+    </div>
+  </div>
+</main>
 
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="container footer">
+<footer class="container footer">
+  <div class="footer-bottom">
     <div class="footer-info">
       <p>📍 Plot 12, Kampala Road, Kampala, Uganda</p>
       <p>📧 info@kampalachamber.org</p>
       <p>📞 +256 700 123 456</p>
     </div>
-
     <div class="socials">
-      <a href="https://facebook.com/ivanakena" target="_blank">
-        <img src="images/facebook.png" alt="Facebook">
-      </a>
-      <a href="https://linkedin.com/in/akena-ivan83" target="_blank">
-        <img src="images/linkedin.png" alt="LinkedIn">
-      </a>
-      <a href="https://github.com/akenaivan83" target="_blank">
-        <img src="images/github.png" alt="GitHub">
-      </a>
+      <a href="https://facebook.com/ivanakena" target="_blank"><img src="images/facebook.png" alt="Facebook"></a>
+      <a href="https://linkedin.com/in/akena-ivan83" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="https://github.com/akenaivan83" target="_blank"><img src="images/github.png" alt="GitHub"></a>
     </div>
-  </footer>
+  </div>
+  <p class="footer-copy">© <span id="year"></span> Akena Ivan | WDD 231</p>
+</footer>
 
-  <script>
-    // Timestamp setup
-    document.getElementById('timestamp').value = new Date().toLocaleString();
-
-    // Footer year
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-
+<script>
+  document.getElementById('timestamp').value = new Date().toLocaleString();
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
