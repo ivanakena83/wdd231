@@ -1,19 +1,23 @@
 /* large.css - Desktop (min-width: 900px) */
 @media (min-width: 900px) {
+  /* Hide hamburger icon */
   .hamburger {
     display: none;
   }
+
+  /* Navigation: horizontal, centered, with proper spacing */
   nav {
-    display: flex !important;
+    display: flex !important;          /* override any hidden state */
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 2.5rem;
-    background: transparent;
+    background: transparent;           /* remove background from mobile */
     backdrop-filter: none;
     margin-top: 0;
     padding: 0.5rem 0;
   }
+
   nav a {
     border-bottom: none;
     padding: 0.5rem 1.5rem;
@@ -22,84 +26,112 @@
     font-weight: 500;
     transition: background-color 0.2s, color 0.2s;
   }
+
   nav a:hover {
     background: rgba(255, 255, 255, 0.2);
   }
+
   nav a.active {
     background: var(--accent);
     color: var(--primary);
     font-weight: 700;
   }
+
+  /* Main content: centered with max width */
   main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 2.5rem;
   }
+
+  /* Welcome section hero image – slightly larger on desktop */
   .welcome .hero-image img {
     max-height: 500px;
     border-radius: 16px;
   }
+
+  /* Home cards: three in a row with even spacing */
   .home-cards {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
+
   .card {
     padding: 2rem;
     transition: transform 0.3s, box-shadow 0.3s;
   }
+
   .card:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-hover);
   }
+
   .card h3 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
   }
+
   .card p {
     font-size: 1rem;
   }
+
+  /* Home images: three in a row with consistent size */
   .home-images {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
+
   .home-images img {
-    height: 250px;
+    height: 250px;                     /* uniform height for all three */
     object-fit: cover;
     border-radius: 16px;
   }
+
+  /* Clubs grid: 2 columns, 4 rows with larger cards */
   .club-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
+
   .club-card {
     padding: 1.5rem;
     border-radius: 16px;
   }
+
   .club-card h3 {
     font-size: 1.2rem;
     margin: 1rem 0 0.5rem;
   }
+
   .club-card p {
     font-size: 1rem;
   }
+
   .club-card button {
     font-size: 1rem;
     padding: 0.6rem;
     margin-top: 1rem;
   }
+
+  /* Modal – larger and better positioned */
   .modal-content {
     width: 40%;
     max-width: 500px;
     margin: 10% auto;
     padding: 2.5rem;
   }
+
+  /* Footer – add some breathing room */
   footer {
     padding: 2rem;
     font-size: 1rem;
   }
+
+  /* Optional: adjust headings for desktop */
   h2 {
     font-size: 2.2rem;
   }
+
   h2::after {
     width: 80px;
     height: 5px;
