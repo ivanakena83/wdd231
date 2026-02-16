@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="List of member clubs of Kampala Football Clubs Association.">
+  <meta name="author" content="Your Name">
+  <title>KFCA | Member Clubs</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <meta property="og:title" content="KFCA Member Clubs">
+  <meta property="og:description" content="Meet the clubs that make Kampala football vibrant.">
+  <meta property="og:image" content="https://yourdomain.com/finalproject/images/logo.png">
+  <meta property="og:url" content="https://yourdomain.com/finalproject/clubs.html">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="small.css">
+  <link rel="stylesheet" href="medium.css">
+  <link rel="stylesheet" href="large.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <img src="images/logo.webp" alt="KFCA Logo" class="logo">
+      <h1>Kampala Football Clubs Association</h1>
+    </div>
+    <button id="menu" class="hamburger" aria-label="Toggle menu">☰</button>
+    <nav id="nav">
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clubs.html" class="active">Clubs</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Member Clubs</h2>
+    <div id="clubs-container" class="club-grid">
+      <!-- Clubs will be injected here by JavaScript -->
+    </div>
+  </main>
+
+  <!-- Modal Dialog -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="close" class="close">&times;</span>
+      <h3>Club Details</h3>
+      <p id="modal-info"></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© <span id="year"></span> Kampala Football Clubs Association</p>
+    <p><a href="attributions.html">Attributions</a> | <a href="#" id="video-link">Video Demo</a></p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

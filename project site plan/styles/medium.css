@@ -1,11 +1,30 @@
+/* medium.css */
 @media (min-width: 641px) {
-
-.discover-grid {
-  grid-template-areas:
-    "area1 area2"
-    "area3 area4"
-    "area5 area6"
-    "area7 area8";
-}
-
+  h1 {
+    font-size: 1.8rem;
+  }
+  .home-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .home-images {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  .club-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .club-card h3 {
+    font-size: 1.1rem;
+  }
+  .club-card p {
+    font-size: 0.9rem;
+  }
+  main {
+    padding: 2rem;
+  }
+  .modal-content {
+    width: 60%;
+  }
 }

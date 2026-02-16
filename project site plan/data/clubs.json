@@ -1,0 +1,10 @@
+[
+  {"name":"Kampala United","coach":"Moses","league":"Premier","members":25},
+  {"name":"City Stars","coach":"Peter","league":"Division 1","members":22},
+  {"name":"Luzira FC","coach":"James","league":"Division 2","members":20},
+  {"name":"Nakawa FC","coach":"Brian","league":"Premier","members":24},
+  {"name":"Kawempe FC","coach":"Samuel","league":"Division 1","members":21},
+  {"name":"Ntinda FC","coach":"Joseph","league":"Division 2","members":19},
+  {"name":"Makindye FC","coach":"Paul","league":"Premier","members":26},
+  {"name":"Rubaga FC","coach":"David","league":"Division 1","members":23}
+]

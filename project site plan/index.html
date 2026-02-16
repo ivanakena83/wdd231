@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kampala Football Clubs Association – uniting and developing football clubs in Kampala.">
+  <meta name="author" content="Your Name">
+  <title>KFCA | Home</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kampala Football Clubs Association">
+  <meta property="og:description" content="Join us to promote football development in Kampala.">
+  <meta property="og:image" content="https://yourdomain.com/finalproject/images/logo.png">
+  <meta property="og:url" content="https://yourdomain.com/finalproject/index.html">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="small.css">
+  <link rel="stylesheet" href="medium.css">
+  <link rel="stylesheet" href="large.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="logo-title">
+      <img src="images/logo.webp" alt="KFCA Logo" class="logo">
+      <h1>Kampala Football Clubs Association</h1>
+    </div>
+    <button id="menu" class="hamburger" aria-label="Toggle menu">☰</button>
+    <nav id="nav">
+      <ul class="navigation">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="clubs.html">Clubs</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Welcome section with full‑width hero image -->
+    <section class="welcome">
+      <h2>Welcome to KFCA</h2>
+      <div class="hero-image">
+        <img src="images/football match.webp" alt="Football action" loading="lazy">
+      </div>
+      <p class="tagline">Uniting football clubs across Kampala to develop talent and promote the beautiful game.</p>
+    </section>
+
+    <!-- Three cards in a row -->
+    <section class="home-cards">
+      <div class="card">
+        <h3>About KFCA</h3>
+        <p>Established in 2015, we bring together clubs from all divisions to foster collaboration and growth.</p>
+      </div>
+      <div class="card">
+        <h3>Our Mission</h3>
+        <p>To organize competitive leagues, provide coaching resources, and support youth development.</p>
+      </div>
+      <div class="card">
+        <h3>Our Vision</h3>
+        <p>To see Kampala become a hub of football excellence with thriving clubs and passionate fans.</p>
+      </div>
+    </section>
+
+    <!-- Three equal‑size images in a row -->
+    <section class="home-images">
+      <img src="images/ug5.webp" alt="Football match" loading="lazy">
+      <img src="images/ug11.webp" alt="Youth training" loading="lazy">
+      <img src="images/ug12.webp" alt="Team celebration" loading="lazy">
+    </section>
+
+    <!-- Local storage message -->
+    <p id="visit-message" class="visit-message"></p>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Kampala Football Clubs Association</p>
+    <p><a href="attributions.html">Attributions</a> | <a href="#" id="video-link">Video Demo</a></p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
