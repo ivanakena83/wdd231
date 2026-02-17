@@ -6,5 +6,12 @@
   {"name":"Kawempe FC","coach":"Samuel","league":"Division 1","members":21},
   {"name":"Ntinda FC","coach":"Joseph","league":"Division 2","members":19},
   {"name":"Makindye FC","coach":"Paul","league":"Premier","members":26},
-  {"name":"Rubaga FC","coach":"David","league":"Division 1","members":23}
+  {"name":"Rubaga FC","coach":"David","league":"Division 1","members":23},
+  {"name":"Kireka FC","coach":"Isaac","league":"Division 2","members":18},
+  {"name":"Bweyogerere FC","coach":"Mark","league":"Premier","members":25},
+  {"name":"Mengo FC","coach":"Daniel","league":"Division 1","members":20},
+  {"name":"Kisaasi FC","coach":"Allan","league":"Division 2","members":19},
+  {"name":"Kololo FC","coach":"Henry","league":"Premier","members":27},
+  {"name":"Muyenga FC","coach":"John","league":"Division 1","members":22},
+  {"name":"Bugolobi FC","coach":"Robert","league":"Division 2","members":21}
 ]
