@@ -386,3 +386,17 @@ footer a:hover {
   color: var(--primary);
   font-size: 1.2rem;
 }
+/* Attributions page */
+.attributions-main {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+.attributions-main a {
+  color: var(--primary);
+  text-decoration: underline;
+}
+.attributions-main a:hover {
+  color: var(--accent);
+}

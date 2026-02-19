@@ -3,29 +3,56 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Attributions | KFCA</title>
+  <meta name="description" content="Attributions for images and data used on the Kampala Football Clubs Association website.">
   <meta name="author" content="Akena Ivan">
-  <link rel="stylesheet" href="normalize.css">
+  <title>Attributions | KFCA</title>
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <!-- Open Graph -->
+  <meta property="og:title" content="Attributions | KFCA">
+  <meta property="og:description" content="Sources and credits for images and data used on the KFCA website. All placeholder images are from Unsplash and club data is fictional.">
+  <meta property="og:image" content="https://ivanakena83.github.io/wdd231/finalproject/images/logo.webp">
+  <meta property="og:url" content="https://ivanakena83.github.io/wdd231/finalproject/attributions.html">
+  <meta property="og:type" content="website">
   <!-- Google Fonts with preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-  <!-- Open Graph (optional) -->
-  <meta property="og:title" content="Attributions | KFCA">
-  <meta property="og:description" content="Image and data sources for KFCA.">
-  <meta property="og:image" content="https://ivanakena83.github.io/wdd231/finalproject/images/logo.webp">
-  <meta property="og:url" content="https://ivanakena83.github.io/wdd231/finalproject/attributions.html">
-  <meta property="og:type" content="website">
-  <style>
-    body { font-family: 'Roboto', sans-serif; padding: 2rem; max-width: 800px; margin: 0 auto; line-height: 1.6; }
-    a { color: #1e3c72; text-decoration: underline; }
-  </style>
+  <!-- CSS (all three files for consistency) -->
+  <link rel="stylesheet" href="normalize.css">
+  <link rel="stylesheet" href="small.css">
+  <link rel="stylesheet" href="medium.css">
+  <link rel="stylesheet" href="large.css">
 </head>
 <body>
-  <h1>Attributions</h1>
-  <p>Logo: Created by Akena Ivan.</p>
-  <p>Club data: Fictional, generated for educational purposes.</p>
-  <p>Images: Placeholder images from [source, e.g., Unsplash] – replace with your own.</p>
-  <p><a href="index.html">Back to Home</a></p>
+  <header class="site-header">
+    <div class="logo-title">
+      <img src="images/logo.webp" alt="KFCA Logo" class="logo">
+      <h1>Kampala Football Clubs Association</h1>
+    </div>
+    <button id="menu" class="hamburger" aria-label="Toggle menu">☰</button>
+    <nav id="nav">
+      <ul class="navigation">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="clubs.html">Clubs</a></li>
+        <li><a href="join.html">Join</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="attributions-main">
+    <h1>Attributions</h1>
+    <p>Logo: Created by Akena Ivan.</p>
+    <p>Club data: Fictional, generated for educational purposes.</p>
+    <p>Images: Placeholder images from <a href="https://unsplash.com" target="_blank">Unsplash</a> – replace with your own.</p>
+    <p><a href="index.html">Back to Home</a></p>
+  </main>
+
+  <footer>
+    <p>© <span id="year"></span> Kampala Football Clubs Association</p>
+    <p><a href="attributions.html">Attributions</a> | <a href="https://youtube.com/shorts/l65rldkWlx8?si=6ZxDtJ7KikSgnwaY" target="_blank">Video Demo</a></p>
+  </footer>
+
+  <script type="module" src="main.js"></script>
 </body>
 </html>
