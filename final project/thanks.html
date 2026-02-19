@@ -22,6 +22,8 @@
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/medium.css">
   <link rel="stylesheet" href="styles/large.css">
+  <!-- JavaScript (module with defer) -->
+  <script type="module" src="scripts/main.js" defer></script>
 </head>
 <body>
   <header class="site-header">
@@ -48,13 +50,5 @@
     <p>© <span id="year"></span> Kampala Football Clubs Association</p>
     <p><a href="attributions.html">Attributions</a> | <a href="https://youtube.com/shorts/l65rldkWlx8?si=6ZxDtJ7KikSgnwaY" target="_blank">Video Demo</a></p>
   </footer>
-
-  <script>
-    const params = new URLSearchParams(window.location.search);
-    const name = params.get('name');
-    const club = params.get('club');
-    document.getElementById('output').textContent = `Thank you, ${name} from ${club}!`;
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
