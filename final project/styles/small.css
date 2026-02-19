@@ -29,7 +29,8 @@ body {
 .logo-title {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
 }
 .logo {
   width: 60px;
@@ -41,55 +42,39 @@ h1 {
   margin: 0;
   font-weight: 400;
   letter-spacing: 0.5px;
+  flex: 1;
+  text-align: center;
 }
 
-/* HAMBURGER */
-.hamburger {
-  background: none;
-  border: none;
-  font-size: 2.2rem;
-  color: white;
-  cursor: pointer;
-  margin-top: 0.5rem;
-  display: block;
-  width: fit-content;
-  transition: transform 0.2s;
-}
-.hamburger:hover {
-  transform: scale(1.1);
-}
-
-/* NAVIGATION (hidden by default) */
+/* NAVIGATION (always horizontal) */
 nav {
-  display: none;
-  flex-direction: column;
-  margin-top: 1rem;
-  background: rgba(255,255,255,0.15);
-  border-radius: var(--border-radius);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-}
-nav.open {
   display: flex;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
-nav a {
-  padding: 0.8rem 1rem;
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navigation a {
+  padding: 0.5rem 1rem;
   color: white;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  transition: background 0.2s;
-  font-weight: 400;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 20px;
+  transition: background-color 0.2s, color 0.2s;
 }
-nav a:last-child {
-  border-bottom: none;
+.navigation a:hover {
+  background: rgba(255,255,255,0.2);
 }
-nav a:hover {
-  background: rgba(255,255,255,0.25);
-}
-nav a.active {
+.navigation a.active {
   background: var(--accent);
   color: var(--primary);
   font-weight: 700;
-  border-radius: 4px;
 }
 
 /* MAIN */
@@ -192,7 +177,7 @@ h2::after {
   box-shadow: var(--shadow-hover);
 }
 
-/* CLUBS GRID – 2 columns on mobile */
+/* CLUBS GRID – 2 columns, each card has image left */
 .club-grid {
   display: grid;
   gap: 1.5rem;
@@ -203,10 +188,9 @@ h2::after {
   padding: 1rem;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  text-align: center;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
   border: 1px solid rgba(0,0,0,0.05);
   transition: all 0.2s;
 }
@@ -214,18 +198,29 @@ h2::after {
   transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
 }
-.club-card h3 {
+.club-card .club-image {
+  width: 40%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.club-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.club-info h3 {
   color: var(--primary);
-  margin: 0.5rem 0 0.3rem;
+  margin: 0 0 0.3rem 0;
   font-size: 1rem;
   font-weight: 700;
 }
-.club-card p {
+.club-info p {
   margin: 0.2rem 0;
   font-size: 0.85rem;
   color: var(--text-light);
 }
-.club-card button {
+.club-info button {
   background: var(--primary);
   color: white;
   border: none;
@@ -236,8 +231,9 @@ h2::after {
   font-size: 0.85rem;
   font-weight: 500;
   transition: background 0.2s, transform 0.1s;
+  align-self: flex-start;
 }
-.club-card button:hover {
+.club-info button:hover {
   background: var(--accent);
   color: var(--primary);
   transform: scale(1.02);

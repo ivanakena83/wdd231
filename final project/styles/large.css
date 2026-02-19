@@ -1,36 +1,5 @@
 /* large.css - Desktop (min-width: 900px) */
 @media (min-width: 900px) {
-  .hamburger {
-    display: none;
-  }
-  nav {
-    display: flex !important;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 2.5rem;
-    background: transparent;
-    -webkit-backdrop-filter: none;
-    backdrop-filter: none;
-    margin-top: 0;
-    padding: 0.5rem 0;
-  }
-  nav a {
-    border-bottom: none;
-    padding: 0.5rem 1.5rem;
-    border-radius: 40px;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: background-color 0.2s, color 0.2s;
-  }
-  nav a:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  nav a.active {
-    background: var(--accent);
-    color: var(--primary);
-    font-weight: 700;
-  }
   main {
     max-width: 1200px;
     margin: 0 auto;
@@ -41,7 +10,6 @@
     border-radius: 16px;
   }
   .home-cards {
-    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
   .card {
@@ -60,16 +28,12 @@
     font-size: 1rem;
   }
   .home-images {
-    grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
   .home-images img {
     height: 250px;
-    object-fit: cover;
-    border-radius: 16px;
   }
   .club-grid {
-    grid-template-columns: repeat(2, 1fr);
     gap: 2.5rem;
   }
   .club-card {
